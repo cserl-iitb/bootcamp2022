@@ -9,20 +9,30 @@
 #include <fcntl.h>
 #include <pthread.h>
 
-void *clientThread(int* serverport)
+struct host_port
+{
+    char* hostname;
+    int port;
+};
+
+
+void *clientThread(void* server_hostport)
 {
     int sockfd, portno, n;
     struct sockaddr_in serv_addr;
     struct hostent *server;
     char buffer[256];
 
-    portno = *serverport;
+    struct host_port* hostport = (host_port*)server_hostport;
+
+    char *hostname = hostport->hostname;
+    portno = hostport->port;
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (sockfd < 0)error("ERROR opening socket");
 
-    server = gethostbyname(server);
+    server = gethostbyname(hostname);
     if (server == NULL) {
         fprintf(stderr,"ERROR, no such host\n");
         exit(0);

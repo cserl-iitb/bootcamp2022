@@ -31,7 +31,7 @@ void *socketThread(void *arg)
         if (n < 0) error("ERROR reading from socket");
 
     pthread_mutex_lock(&lock);
-    char *message = malloc(sizeof(client_message)+20);
+    char *message = (char *) malloc(sizeof(client_message)+20);
     strcpy(message,"Read From Client : ");
     strcat(message,client_message);
     strcat(message,"\n");
@@ -53,7 +53,8 @@ void error(char *msg)
 
 int main(int argc, char *argv[])
 {
-     int sockfd, newsockfd, portno, clilen;
+     int sockfd, newsockfd, portno;
+     socklen_t clilen;
     //  char buffer[256];
      struct sockaddr_in serv_addr, cli_addr;
      int n;
