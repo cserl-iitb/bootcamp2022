@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
     if(listen(sockfd,50)==0)printf("Listening\n");
     else printf("Error\n");
 
-    pthread_t tid[60];
+    pthread_t tid[51];
     int i =0;
 
     while(1)
