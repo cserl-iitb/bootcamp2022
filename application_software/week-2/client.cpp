@@ -15,6 +15,12 @@ struct host_port
     int port;
 };
 
+void error(char *msg)
+{
+    perror(msg);
+    exit(0);
+}
+
 
 void *clientThread(void* server_hostport)
 {
@@ -60,11 +66,6 @@ void *clientThread(void* server_hostport)
 
 }
 
-void error(char *msg)
-{
-    perror(msg);
-    exit(0);
-}
 
 int main(int argc, char *argv[])
 {
