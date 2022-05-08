@@ -33,7 +33,7 @@ In this part of the task, you will try to communicate between two processes thro
 
 You are supposed to add a new signal_process(pid, type) system call, where pid is the process id to which signal is to be sent and type is the type of the signal being sent which can be either of {PAUSE, KILL, CONTINUE}. If an user-level program calls signal_process(pid, type), then a signal is delivered to the process pid immediately and the corresponding process handles it as soon as it gets sched- uled next time. The type of the signal determines the action to be taken, i.e., PAUSE does not execute/schedule the process, KILL terminates the process, and CONTINUE release a paused processes to continue execution. Note that a paused process make no progress (is never scheduled to execute) and a process continues from where it left off after a pause.
 
-You have been given a boilerplate script of the system call function which you have to implement. Read through the script and you will get an idea of what has to be done.
+You have been given a boilerplate script(which means some part of the code already written for you) of the system call function which you have to implement. Read through the script and you will get an idea of what has to be done. The file is named as 'Week3_signal_skeleton_code.md'
 
 You are also given a test program signal-test.c to check your final code. Run this at the end to check whether what changes you have made are correct or not.
 
