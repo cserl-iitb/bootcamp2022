@@ -16,6 +16,12 @@ char client_message[2000]; // buffer to store client message
 char buffer[1024]; // buffer to store data
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER; // mutex for critical section
 
+void error(char *msg)
+{
+    perror(msg);
+    exit(1);
+}
+
 void *socketThread(void *arg)
 {
     int newsockfd = *(int *)arg;
@@ -44,11 +50,6 @@ void *socketThread(void *arg)
     close(newsockfd);
     pthread_exit(NULL);
 
-}
-void error(char *msg)
-{
-    perror(msg);
-    exit(1);
 }
 
 int main(int argc, char *argv[])
