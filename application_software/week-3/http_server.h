@@ -1,3 +1,6 @@
+#ifndef HTTP_SERVER_H
+#define HTTP_SERVER_H
+
 #include <iostream>
 using namespace std;
 
@@ -20,8 +23,6 @@ struct HTTP_Response
 
     string status_code;  //ex: 200, 404, etc.
     string status_text;  //ex: OK, Not Found, etc.
-
-    string date;
     
     string content_type;
     string content_length;
@@ -35,3 +36,5 @@ struct HTTP_Response
 
 
 HTTP_Response* handle_request(string request);
+
+#endif
