@@ -14,7 +14,7 @@ The goal of this part of the assignment is to give you a chance to explore basic
 <p align="center">
   <img src="./git.png" />
   <br>
-  [Git Overview](https://www.cs.swarthmore.edu/~adanner/help/git/)
+  <a href="https://www.cs.swarthmore.edu/~adanner/help/git/">Git Overview</a>
 </p>
 
 ### Basic git commands
@@ -49,34 +49,34 @@ Note: There are plenty of resources available online for more detailed reading. 
 
 1. <code> Repository Creation</code>
 
-(a) Create a new private repository named \<Bootcamp_2022_trackname\> from your account. 
+- Create a new private repository named \<Bootcamp_2022_trackname\> from your account. 
 
-(b) Clone it on your local machine (use git clone \<url\> command).
+- Clone it on your local machine (use git clone \<url\> command).
  
-(c) Make a new folder named \<Week_1\> inside it. 
+- Make a new folder named \<Week_1\> inside it. 
 
-(d) Do add, commit and push as you progress on this assignment.
+- Do add, commit and push as you progress on this assignment.
 
 2. <code> Do you want to fix a bug? </code>
 
-(a)  Fork [this](https://github.com/rajagond/git_assignment) repository.
+- Fork [this](https://github.com/rajagond/git_assignment) repository.
 
-(b) Clone your repository from github onto your local machine (use git clone \<fork_url\> command).
+- Clone your repository from github onto your local machine (use git clone \<fork_url\> command).
  
-(c) <code>cd git_assignment</code>
+- <code>cd git_assignment</code>
 
-(d) <code>git checkout -b branch_name</code>
+- <code>git checkout -b branch_name</code>
 
-(e) Fix bug (test it) and add gitignore file to tells git to ignore a.out file.
+- Fix bug (test it) and add gitignore file to tells git to ignore a.out file.
 
-(f) <code>git add .</code>
+- <code>git add .</code>
 
-(g) <code>git commit -m "bug fixed"</code>
+- <code>git commit -m "bug fixed"</code>
 
-(h) <code> git push -u origin branch_name</code>
+- <code> git push -u origin branch_name</code>
 
-(i) <code>git tag</code> (This command will print <code>submission</code> on terminal. Lookup online to know more about what <code>git tag</code> does.) Note that it prints <code>submission</code> because the <code>submission</code> tag was already created in the original repository.
+- <code>git tag</code> (This command will print <code>submission</code> on terminal. Lookup online to know more about what <code>git tag</code> does.) Note that it prints <code>submission</code> because the <code>submission</code> tag was already created in the original repository.
 
-(j) Now, delete the <code>submission</code> tag from both local and remote tags. Create new tag <code>final_submission</code> and push it.
+- Now, delete the <code>submission</code> tag from both local and remote tags. Create new tag <code>final_submission</code> and push it.
 
-(k) Go to your remote repository and create a pull request.
+- Go to your remote repository and create a pull request.
