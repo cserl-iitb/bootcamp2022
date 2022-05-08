@@ -7,5 +7,6 @@ https://docs.google.com/document/d/11etSkEslUu7p8JS-KE3sf7onY_jjiUGS3e99_XMlS2o/
 ## Compilation
 
 ```g++ client.cpp -o client -lsocket -lnsl```
+
 ```g++ server.cpp -o server -lsocket -lnsl```
 
