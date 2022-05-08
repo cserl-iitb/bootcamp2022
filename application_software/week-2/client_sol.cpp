@@ -9,6 +9,12 @@
 #include <fcntl.h>
 #include <pthread.h>
 
+void error(char *msg)
+{
+    perror(msg);
+    exit(0);
+}
+
 void * clientThread(int serverport)
 {
     int sockfd, portno, n;
@@ -53,11 +59,6 @@ void * clientThread(int serverport)
 
 }
 
-void error(char *msg)
-{
-    perror(msg);
-    exit(0);
-}
 
 int main(int argc, char *argv[])
 {
