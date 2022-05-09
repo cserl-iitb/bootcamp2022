@@ -6,7 +6,7 @@
 - (Optional) Chapters 0, 1 from [this book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
 - Link to the [PDF formatted xv6 source code](https://pdos.csail.mit.edu/6.828/2017/xv6/xv6-rev10.pdf) if you want the whole xv6 kernel code in one place. This doesn't include the user programs like **ls, echo** etc.
 
-### Before you begin the assignment
+### Before you begin the assignment:
 
 1. Download, install, and run the original xv6 OS code. You can use your regular desktop/laptop to run xv6; it runs on an x86 emulator called QEMU that emulates x86 hardware on your local machine. In the xv6 folder, run **make**, followed by **make qemu** or **make-qemu-nox**, to boot xv6 and open a shell. Detailed instructions are available [here](https://www.cse.iitb.ac.in/~parthsangani/cs347m_s21/).
 2. We have modied some xv6 files for this lab, and these patched files are provided as part of this lab's code. Before you begin the lab, copy the patched files into the main xv6 code directory.
