@@ -1,34 +1,27 @@
 ## Part B: New system calls in xv6
 
 We will add a couple of new system calls to the xv6 kernel.<br />
-Ready? Start by understanding the system call path followed when a system call is invoked. A simple tutorial is linked here. You don't need to understand everything, just get an overview of the ow through kernel code on invocation of a system call and which les need to be modied to add a new system call.<br /><br />
+Ready? Start by understanding the system call path followed when a system call is invoked. A simple tutorial is linked here. You don't need to understand everything, just get an overview of the flow through kernel code on invocation of a system call and which les need to be modied to add a new system call.<br /><br />
 Now look at an existing system call to understand how system calls are to be added. For example, look at how **sysproc.c** implements system calls like **sys_fork** (which calls functions in other files).<br /><br />
 You will implement the following new system calls in xv6.<br />
 ### Hello xv6 World!
-Implement a system call, called hello(), which prints Hi! Welcome to the world of xv6! to the console. You can use cprintf for printing in kernel mode.
-Next, we will implement a system call called helloYou(name) that takes an argument char* name. It prints name to the console. You can use cprintf for printing in kernel mode.
-Check out the open system call in sysfile.c that takes in multiple arguments like strings and integers, and return a simple integer value.
+1. Implement a system call, called **hello()**, which prints **Hi! Welcome to the world of xv6!** to the console. You can use **cprintf** for printing in kernel mode.
+2. Next, we will implement a system call called **helloYou(name)** that takes an argument **char* name**. It prints name to the console. You can use **cprintf** for printing in kernel mode.<br />
+Check out the **open** system call in **sysfile.c** that takes in multiple arguments like strings and integers, and return a simple integer value.<br />
+Also check **argint, argptr, argstr** functions and their descriptions in **syscall.c**.
+**Hints:** You will need to modify a number of different files for this exercise, though the total number of lines of code you will be adding is quite small.<br />
+At a minimum, you will need to alter **sysproc.c, syscall.h, syscall.c user.h** and **usys.S** to implement your new system calls.<br />
+You can test your implementation with provided testcases: **hello.c** and **helloyou.c**
 
-Also check argint, argptr, argstr functions and their descriptions in syscall.c.
-
-Hints: You will need to modify a number of dierent les for this exercise, though the total number of lines of code you will be adding is quite small.
-
-At a minimum, you will need to alter sysproc.c, syscall.h, syscall.c user.h, and usys.S to im- plement your new system calls.
-
-You can test your implementation with provided testcases: hello.c and helloyou.c
-
-Exploring OS State
-We will be using the struct ptable in the remaining exercises. Whenever you access the ptable you must hold a lock - a synchronization primitive, before you start using it. Don't worry if you don't understand locks, we will learn about them in the upcoming weeks.
-
-For now just make sure that if you need to use the ptable you follow the pattern :
-
-. .
-acquire(&ptable . lock );
-
-// Make use of the ptable structure release(&ptable . lock ); // DO NOT FORGET THIS ! !
-
-. .
-got siblings?
+### Exploring OS State
+We will be using the struct ptable in the remaining exercises. Whenever you access the ptable you must hold a lock - a synchronization primitive, before you start using it. Don't worry if you don't understand locks, we will learn about them in the upcoming weeks.<br />
+For now just make sure that if you need to use the ptable you follow the pattern :<br />
+...<br />
+acquire(&ptable . lock );<br />
+// Make use of the ptable structure<br />
+release(&ptable . lock ); // DO NOT FORGET THIS !!<br />
+...<br />
+1. **got siblings?**<br />
 We will implement a system call get_siblings_info() which prints the details of siblings (pro- cesses forked from the same parent process) of the calling process to the console.
 
 get_siblings_info() should print process ID and process state of it's sibings in the follow- ing format.
