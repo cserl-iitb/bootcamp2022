@@ -12,6 +12,9 @@ Execute the user program **debug** and observe that the bubble sort implemented 
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/81876291/167428724-d25223ec-4685-47a4-8935-b676d4815167.png">
 </p>
+<p align="center">
+  Figure 1: GDB auto loading declined
+</p>
  
 ### Adding user programs in xv6
 A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).
