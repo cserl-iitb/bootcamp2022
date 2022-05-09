@@ -19,17 +19,16 @@ Execute the user program **debug** and observe that the bubble sort implemented 
 ### Adding user programs in xv6
 A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).
 
-1. After executing **make qemu** you will see a prompt. The prompt is the xv6 command line interface to execute user level programs. Begin with ls and nd which programs exist and try executing them. The source code for all programs is included as part of the xv6 distribution. Look up the implementation of these programs. For example, **cat.c** has the source code for the **cat** program. Execute and lookup the following: **ls, cat, wc, echo, grep** etc. Understand how the syntax in some places is dierent than normal C syntax.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check the **makefile** to see how the program wc is set up for compilation. (You can search for wc in the le to see what additions are made.)
+1. After executing **make qemu** you will see a prompt. The prompt is the xv6 command line interface to execute user level programs. Begin with ls and nd which programs exist and try executing them.<br />
+The source code for all programs is included as part of the xv6 distribution. Look up the implementation of these programs. For example, **cat.c** has the source code for the **cat** program. Execute and lookup the following: **ls, cat, wc, echo, grep** etc. Understand how the syntax in some places is dierent than normal C syntax.<br />
+Check the **makefile** to see how the program wc is set up for compilation. (You can search for wc in the le to see what additions are made.)
 
 2. Modify the existing shell program **sh.c** in xv6 to change the shell prompt.<br />
-E.g. : turtle$
-
+E.g. : turtle$<br />
 **Hint** : Just search where the existing shell prompt **$** is and modify it.
 
-3. Complete the program **cmd.c** so that it creates a child process, child process executes a program, and parent waits till completion of the child process before terminating. This program should use the **fork** and **exec** system call of xv6. The program to be executed by the child process can be one of the simple xv6 programs and will be specied at the command line.
-Example usage:
+3. Complete the program **cmd.c** so that it creates a child process, child process executes a program, and parent waits till completion of the child process before terminating. This program should use the **fork** and **exec** system call of xv6. The program to be executed by the child process can be one of the simple xv6 programs and will be specied at the command line.<br />
+Example usage:<br />
 
 **./cmd ls**<br />
 **./cmd echo hello**
