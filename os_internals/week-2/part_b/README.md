@@ -1,14 +1,10 @@
-Part B: New system calls in xv6
+## Part B: New system calls in xv6
 
-We will add a couple of new system calls to the xv6 kernel.
-
-Ready? Start by understanding the system call path followed when a system call is invoked. A simple tutorial is linked here. You don't need to understand everything, just get an overview of the ow through kernel code on invocation of a system call and which les need to be modied to add a new system call.
-
-Now look at an existing system call to understand how system calls are to be added. For example, look at how sysproc.c implements system calls like sys_fork (which calls functions in other les).
-
-You will implement the following new system calls in xv6.
-
-Hello xv6 World!
+We will add a couple of new system calls to the xv6 kernel.<br />
+Ready? Start by understanding the system call path followed when a system call is invoked. A simple tutorial is linked here. You don't need to understand everything, just get an overview of the ow through kernel code on invocation of a system call and which les need to be modied to add a new system call.<br /><br />
+Now look at an existing system call to understand how system calls are to be added. For example, look at how **sysproc.c** implements system calls like **sys_fork** (which calls functions in other files).<br /><br />
+You will implement the following new system calls in xv6.<br />
+### Hello xv6 World!
 Implement a system call, called hello(), which prints Hi! Welcome to the world of xv6! to the console. You can use cprintf for printing in kernel mode.
 Next, we will implement a system call called helloYou(name) that takes an argument char* name. It prints name to the console. You can use cprintf for printing in kernel mode.
 Check out the open system call in sysfile.c that takes in multiple arguments like strings and integers, and return a simple integer value.
