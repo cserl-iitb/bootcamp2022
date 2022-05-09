@@ -1,9 +1,8 @@
-Part A: User Programs in xv6
+## Part A: User Programs in xv6
 
-Debugging user programs on xv6 with gdb
-Look at `Remote Debugging xv6 under QEMU' section of this page for details on how to start de- bugging xv6 using gdb.
-
-Execute the user program debug and observe that the bubble sort implemented does not give the correct results. You have to nd the bug and make the program give the correct result.
+### Debugging user programs on xv6 with gdb
+Look at `Remote Debugging xv6 under QEMU' section of this page for details on how to start de-bugging xv6 using gdb.
+Execute the user program **debug** and observe that the bubble sort implemented does not give the correct results. You have to nd the bug and make the program give the correct result.
 
 In xv6 folder, run make followed by make qemu-gdb to run the QEMU emulator in debug-mode.
 In other terminal, in the xv6 folder, run gdb kernel. This will automatically connect this gdb session to the xv6 session. If you see the error message as in gure 1, follow the on screen instruction and alter .gdbinit as suggested on screen and redo the steps.
