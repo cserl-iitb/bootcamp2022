@@ -31,8 +31,8 @@ A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-sys
 3. Complete the program **cmd.c** so that it creates a child process, child process executes a program, and parent waits till completion of the child process before terminating. This program should use the **fork** and **exec** system call of xv6. The program to be executed by the child process can be one of the simple xv6 programs and will be specied at the command line.
 Example usage:
 
-**./cmd ls**
-**./cmd echo hello
+**./cmd ls**<br />
+**./cmd echo hello**
 
 We have already defined the arguments to be passed to **exec** for you in **cmd.c**. You have to use them and implement the core logic in the provided block<br />
 ...<br />
