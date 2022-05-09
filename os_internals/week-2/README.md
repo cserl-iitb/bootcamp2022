@@ -1,6 +1,6 @@
 ## OS Internals Track Week-2
 
-### Material for the lab:
+### Material for the week:
 
 - You must cover these - Lectures 1, 2, 22, 3, 23, 4 from [Lectures on Operating Systems](https://www.cse.iitb.ac.in/~mythili/os/), in the order specied here.
 - (Optional) Chapters 0, 1 from [this book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
