@@ -53,7 +53,7 @@ console        3 18 0
 # Ctrl+A X means 1. First press Ctrl + A (A is just key a, not the alt key), 2. then release the keys, 3. afterwards press X.
 ```
 
-Note: If you are getting an error in the installation steps, please visit the FAQ section.
+Note: If you are getting an error in the installation steps, please visit the [_FAQ_](README.md#faq) section.
 
 ### Windows 10
 Configure Windows Subsytem for Linux (WSL) by following the official Instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Choose **Ubuntu** as the Linux variant and then follow the instructions for [Ubuntu](README.md#setting-up-your-system-for-os-internals-track) above.
