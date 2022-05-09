@@ -22,7 +22,7 @@
 
 Work through the material provided and then attempt the assignment:
 1. Assignment contains two parts(A and B).
-2. Part-B.c is **Optional - for those who want more challenge!**.
+2. Part-B.2.b is **Optional - for those who want more challenge!**.
 
 ### Submission Guidelines:
 
