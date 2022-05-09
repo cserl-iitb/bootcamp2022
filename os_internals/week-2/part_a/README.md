@@ -31,7 +31,7 @@ Example usage:
 
 We have already defined the arguments to be passed to **exec** for you in **cmd.c**. You have to use them and implement the core logic in the provided block<br />
 ...<br />
-\\\ Implement your code here<br />
+\\ \ Implement your code here<br />
 
 \\ \\<br />
 ...<br />
