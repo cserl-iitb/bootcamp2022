@@ -4,7 +4,7 @@ This is the skeleton code of the 3rd question of this week's task. You can copy 
 int signalProcess(int proc_pid, char* sig)
 {
 
-    Take arguments from user function 
+    //Take arguments from user function using helper functions argint, argstr
     struct proc *p;
     
     acquire(&ptable.lock);
