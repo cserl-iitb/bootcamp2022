@@ -67,9 +67,9 @@ Note: There are plenty of resources available online for more detailed reading. 
 
     - Now merge the \<new_branch\> into main by following below four commands: <br>
         <code>
-        git checkout main <br>
-        git pull origin main <br>
-        git merge \<new_branch\> <br>
+        git checkout main \
+        git pull origin main \
+        git merge \<new_branch\> \
         git push -u origin main
         </code>
 
