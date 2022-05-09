@@ -1,6 +1,3 @@
-/* A simple server in the internet domain using TCP
-   The port number is passed as an argument */
-
 
 #include <stdio.h>
 #include <sys/types.h> 
@@ -38,7 +35,7 @@ int main(int argc, char *argv[])
 {
      int sockfd, newsockfd, portno;
      socklen_t clilen;
-    //  char buffer[256];
+   
      struct sockaddr_in serv_addr, cli_addr;
      int n;
      if (argc < 2) {
