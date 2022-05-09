@@ -20,9 +20,9 @@ Execute the user program **debug** and observe that the bubble sort implemented 
 A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).
 1. After executing make qemuyou will see a prompt. The prompt is the xv6 command line interface to execute user level programs. Begin with ls and nd which programs exist and try executing them.
 
-  The source code for all programs is included as part of the xv6 distribution. Look up the im- plementation of these programs. For example, **cat.c** has the source code for the **cat** program. Execute and lookup the following: **ls, cat, wc, echo, grep** etc. Understand how the syntax in some places is dierent than normal C syntax.
+&nbsp;&nbsp;The source code for all programs is included as part of the xv6 distribution. Look up the im- plementation of these programs. For example, **cat.c** has the source code for the **cat** program. Execute and lookup the following: **ls, cat, wc, echo, grep** etc. Understand how the syntax in some places is dierent than normal C syntax.
 
-  Check the **makefile** to see how the program wc is set up for compilation. (You can search for wc in the le to see what additions are made.)
+&nbsp;&nbsp;Check the **makefile** to see how the program wc is set up for compilation. (You can search for wc in the le to see what additions are made.)
 
 2. Modify the existing shell program **sh.c** in xv6 to change the shell prompt.
 E.g. : turtle$
