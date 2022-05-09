@@ -1,6 +1,6 @@
 ## Getting Familiar With Linux
 
-The goal of this part of the assignment is to get familiar with common (Linux) tools, <code>/proc</code> filesystem in Linux and process behaviour information, monitoring and control.
+The goal of this part of the assignment is to get familiar with common (Linux) commands, <code>/proc</code> filesystem in Linux and process behaviour information, monitoring and control.
 
 In Ubuntu, login and launch the command prompt (aka Terminal). **CTRL + ALT + T** is the keyboard
 shortcut, or you can search for **Terminal** by clicking on the Show Applications button in the bottom-left corner.
@@ -31,7 +31,7 @@ Following are some basic Linux commands. To know more about them use: <code> man
 
  -  <code>ps</code> : The ps command is used to view the processes running on a system. It provides a snapshot of the processes along with detailed process information like process-id, cpu usage, memory usage etc.
 
- -  <code>lsof</code> : lsof is a tool used to list open files. The tool list details of the file itself and details of users, processes which are using the files.
+ -  <code>lsof</code> : lsof is used to list open files. It lists details of the file itself and details of users, processes which are using the files..
  
  -  Understand the <code>/proc</code> filesystem in Linux. The <code>/proc</code> file system is a mechanism provided by Linux for the kernel to report information about the system and processes to users. The <code>/proc</code> file system is nicely documented in the proc man page. You can access this document by running the command <code>man proc</code> on a Linux system. Understand the system-wide <code>proc</code> files such as <code>meminfo</code> and <code>cpuinfo</code>, and per-process files such as <code>status</code> and <code>stat</code>. System related <code>proc</code> files are available in the directory <code>/proc/</code>, and process related <code>proc</code> files are available at <code>/proc/\<process-id\>/</code>
 
