@@ -14,18 +14,18 @@ int signalProcess(int proc_pid, char* sig)
       if(p->pid == proc_pid){
       //Now we will have made sure that p->pid is the pid of our process only.
 
-        if(//signal = pause)
+        if(/*signal = pause*/)
         {
           //Change state of p to something which will cause it to not run by scheduler
         }
 
-        else if(//signal = continue)
+        else if(/*signal = continue*/)
         {
           //Change state of p to running again.
 
         }
 
-        else if(//signal = kill)
+        else if(/*signal = kill*/)
         {      
           //Refer to kill system call
         }
