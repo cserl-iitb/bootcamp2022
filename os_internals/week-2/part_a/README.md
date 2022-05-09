@@ -9,7 +9,7 @@ Execute the user program **debug** and observe that the bubble sort implemented 
 4. Load the user executable with **(gdb) file debug.o.**
 5. Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
 6. Now you can use the gdb commands as learnt in Week 1 assignment to debug further.
-7. <p align="center">
+<p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/81876291/167428724-d25223ec-4685-47a4-8935-b676d4815167.png">
 </p>
  
