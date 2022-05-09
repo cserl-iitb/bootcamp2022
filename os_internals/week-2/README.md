@@ -21,7 +21,7 @@
 - **proc.c** contains implementations of various process related system calls, and the scheduler func- tion. This le also contains the denition of ptable, so any code that must traverse the process list in xv6 must be written here.
 
 Work through the material provided and then attempt the assignment:
-1. Assignment contains two parts(A and B).
+1. Assignment contains two parts([A](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week-2/part_a) and [B](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week-2/part_b)).
 2. Part-B.2.b is **Optional - for those who want more challenge!**.
 
 ### Submission Guidelines:
