@@ -4,13 +4,13 @@
 
 - You must cover these - Lectures 1, 2, 22, 3, 23, 4 from [Lectures on Operating Systems](https://www.cse.iitb.ac.in/~mythili/os/), in the order specied here.
 - (Optional) Chapters 0, 1 from [this book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
-- Link to the [PDF formatted xv6 source code](https://pdos.csail.mit.edu/6.828/2017/xv6/xv6-rev10.pdf) if you want the whole xv6 kernel code in one place. This doesn't include the user programs like ls, echo etc.
+- Link to the [PDF formatted xv6 source code](https://pdos.csail.mit.edu/6.828/2017/xv6/xv6-rev10.pdf) if you want the whole xv6 kernel code in one place. This doesn't include the user programs like **ls, echo** etc.
 
 ### Before you begin the assignment
 
-1. Download, install, and run the original xv6 OS code. You can use your regular desktop/laptop to run xv6; it runs on an x86 emulator called QEMU that emulates x86 hardware on your local machine. In the xv6 folder, run make, followed by make qemu or make-qemu-nox, to boot xv6 and open a shell. Detailed instructions are available [here](https://www.cse.iitb.ac.in/~parthsangani/cs347m_s21/).
-1. We have modied some xv6 les for this lab, and these patched les are provided as part of this lab's code. Before you begin the lab, copy the patched les into the main xv6 code directory.
-1. For this lab, you will need to understand and modify following les: proc.c, proc.h, syscall.c, syscall.h, sysproc.c, defs.h, user.h, and usys.S. Below are some details on these les. You may want to revisit this for Part B.
+1. Download, install, and run the original xv6 OS code. You can use your regular desktop/laptop to run xv6; it runs on an x86 emulator called QEMU that emulates x86 hardware on your local machine. In the xv6 folder, run **make**, followed by **make qemu** or **make-qemu-nox**, to boot xv6 and open a shell. Detailed instructions are available [here](https://www.cse.iitb.ac.in/~parthsangani/cs347m_s21/).
+2. We have modied some xv6 files for this lab, and these patched files are provided as part of this lab's code. Before you begin the lab, copy the patched files into the main xv6 code directory.
+3. For this lab, you will need to understand and modify following files: **proc.c, proc.h, syscall.c, syscall.h, sysproc.c, defs.h, user.h** and **usys.S**. Below are some details on these files. **You may want to revisit this for Part B**.
 - user.h contains the system call denitions in xv6.
 - usys.S contains a list of system calls exported by the kernel, and the corresponding invocation of the trap instruction.
 - syscall.h contains a mapping from system call name to system call number. Every system call must have a number assigned here.
