@@ -21,7 +21,7 @@ The goal of this part of the assignment is to give you a chance to explore basic
 
 - <code>git clone \<repository_url\></code>
 
-Make a local copy of a remote repository.
+Make a local copy of a remote repository on your machine.
 
 - <code>git add \<filename\></code>
 
@@ -37,46 +37,44 @@ Commits all files that you've added. The text inside the quotes after the "-m" i
 
 - <code>git push</code>
     
-Send your changes to the primary repository.
+Send your changes to the remote repository.
 
 - <code>git pull</code>
     
-Get latest version from the primary repository. This should do nothing, if you're working alone but it helps to avoid messing up your repository when you're in a collaboration.
+Get latest version from the remote repository. It helps you to avoid messing up your repository when you're in a collaboration.
 
 Note: There are plenty of resources available online for more detailed reading. Feel free to look them up.
 
 ### Exercises
 
-1. <code> Repository Creation</code>
+1. **Do you want to fix a bug?**
 
-- Create a new private repository named \<Bootcamp_2022_trackname\> from your account. 
+    - Fork [this](https://github.com/rajagond/git_assignment) repository.
 
-- Clone it on your local machine (use git clone \<url\> command).
- 
-- Make a new folder named \<Week_1\> inside it. 
+    - Clone your repository from github onto your local machine (use git clone \<fork_url\> command).
+  
+    - <code>cd git_assignment</code>
 
-- Do add, commit and push as you progress on this assignment.
+    - <code>git checkout -b branch_name</code>
 
-2. <code> Do you want to fix a bug? </code>
+    - Fix bug (test it) and add gitignore file to tells git to ignore a.out file.
 
-- Fork [this](https://github.com/rajagond/git_assignment) repository.
+    - <code>git add .</code>
 
-- Clone your repository from github onto your local machine (use git clone \<fork_url\> command).
- 
-- <code>cd git_assignment</code>
+    - <code>git commit -m "bug fixed"</code>
 
-- <code>git checkout -b branch_name</code>
+    - <code> git push -u origin branch_name</code>
 
-- Fix bug (test it) and add gitignore file to tells git to ignore a.out file.
+    - <code>git tag</code> (This command will print <code>submission</code> on terminal. Lookup online to know more about what <code>git tag</code> does.) Note that it prints <code>submission</code> because the <code>submission</code> tag was already created in the original repository.
 
-- <code>git add .</code>
+    - Now, delete the <code>submission</code> tag from both local and remote tags. Create new tag <code>final_submission</code> and push it on your repository.
 
-- <code>git commit -m "bug fixed"</code>
+2. <code> Repository Creation</code>
 
-- <code> git push -u origin branch_name</code>
+    - Create a new private repository named \<Bootcamp_2022_trackname\> from your account. 
 
-- <code>git tag</code> (This command will print <code>submission</code> on terminal. Lookup online to know more about what <code>git tag</code> does.) Note that it prints <code>submission</code> because the <code>submission</code> tag was already created in the original repository.
+    - Clone it on your local machine (use git clone \<url\> command).
+  
+    - Make a new folder named \<Week_1\> inside it. 
 
-- Now, delete the <code>submission</code> tag from both local and remote tags. Create new tag <code>final_submission</code> and push it.
-
-- Go to your remote repository and create a pull request.
+    - Do add, commit and push as you progress on this assignment.

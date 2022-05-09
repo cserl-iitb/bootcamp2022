@@ -33,7 +33,7 @@ If you are familiar with compilation and execution of c/cpp programs via termina
     Factors: 1 2 3 6
     ```
 
-2. Write and execute a C/C++ Program (``complex.cpp``/``comples.c``) to add two complex numbers and return the result as a new complex number. This is to be done by creating a structure or class of Complex Number and creating a function ``add`` which takes two complex numbers as arguments and returns the result as a new complex number. Assume you are given two complex numbers (``a1 + i.a2``,  ``b1 + i.b2``) terminal in following order:
+2. Write and execute a C/C++ Program (``complex.cpp``/``complex.c``) to add two complex numbers and return the result as a new complex number. This is to be done by creating a structure or class of Complex Number and creating a function ``add`` which takes two complex numbers as arguments and returns the result as a new complex number. Assume you are given two complex numbers (``a1 + i.a2``,  ``b1 + i.b2``) terminal in following order:
     
     ```console
     Enter first complex number: 2 10
@@ -41,17 +41,4 @@ If you are familiar with compilation and execution of c/cpp programs via termina
     Result: 6 19
     ```
     
-3. Consider the files in directory ``make_exercise`` in this assignment folder. Create a Makefile which will create a binary ``main`` (use ``gcc`` compiler) (compiling ``main.cpp``, ``hello.cpp``, ``factorial.cpp`` and ``functions.h``). Note that, you must use makefile variables like compiler (``CC``), flags (``CFLAGS``), dependencies (``DEPS``) in your makefile. Example usage of such variables is as follows:
-
-    ```makefile
-    CC = gcc
-    CFLAGS = -Wall -g -std=c++11
-    DEPS = main.cpp
-
-    main: main.cpp
-        $(CC) $(CFLAGS) $(DEPS) -o main
-    ```
-
-### Submission
-
-Add all files in the directory ``cpp_makefiles_execise`` and push to your repository.
+3. Consider the files in directory ``make_exercise`` in this assignment folder. Create a Makefile which will create a binary ``main`` (use ``gcc`` compiler) (compiling ``main.cpp``, ``hello.cpp``, ``factorial.cpp`` and ``functions.h``). Note that, you must use makefile variables like compiler (``CC``), flags (``CFLAGS``), dependencies (``DEPS``) in your makefile. 

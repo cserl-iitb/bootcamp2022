@@ -3,26 +3,25 @@
 The goal of this part of the assignment is to get familiar with common (Linux) tools, <code>/proc</code> filesystem in Linux and process behaviour information, monitoring and control.
 
 In Ubuntu, login and launch the command prompt (aka Terminal). **CTRL + ALT + T** is the keyboard
-shortcut, or you can search for "**Terminal**" by clicking on the Dash button in the lower-left corner.
+shortcut, or you can search for **Terminal** by clicking on the Show Applications button in the bottom-left corner.
 
 ### Useful References
 
 - [Unix Tutorial for the Beginner](http://www.ee.surrey.ac.uk/Teaching/Unix/) ( Go through Tutorial 1 and Tutorial 2. Others are optional)
 - [Basic Linux Commands](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners) (Optional)
-- [Learning the Shell](http://linuxcommand.org/lc3_learning_the_shell.php) (Optional)
 
 
 ### Basic commands
 Following are some basic Linux commands. To know more about them use: <code> man \<command\> </code>. Start with <code> man man</code>.
 
- -  Make a new directory(folder): <code>mkdir \<dirname\></code>
+ -  Make a new directory: <code>mkdir \<dirname\></code>
  -  Remove directory if it is empty else throw an error: <code>rmdir \<dirname\></code>
  -  Copy file: <code>cp \<source\> \<destination\></code>
  -  Create a new file: <code>touch \<filename\></code>
  -  Delete a single file: <code>rm \<filename\></code>
  -  Delete a whole folder: <code>rm -r \<foldername\></code>
  -  Change working directory: <code>cd \<path\></code>
- -  Move to parent folder: <code>cd ..</code>
+ -  Move to parent directory: <code>cd ..</code>
     and Move to previous directory: <code>cd -</code>
  -  List contents of a folder: <code>ls</code>
  -  Print current directory: <code>pwd</code>
@@ -59,3 +58,8 @@ Following are some basic Linux commands. To know more about them use: <code> man
     gcc cpu.c -o cpu
     ./cpu
     ```
+    This program runs in an infinite loop without terminating. Now open another terminal, run the <code>top</code> command and answer the following questions about the cpu process.
+
+    - What is the PID of the process running the cpu command?
+    - How much CPU and memory does this process consume?
+    - What is the current state of the process? For example, is it running or in a blocked state or a zombie state?

@@ -1,10 +1,10 @@
 This is the skeleton code of the 3rd question of this week's task. You can copy this into your text editor and start working on it. Ignore the commands `acquire(&ptable.lock)` and `release(&ptable.lock)` for now. You will learn about these in the later weeks.
 
-```
+```c
 int signalProcess(int proc_pid, char* sig)
 {
 
-    Take arguments from user function 
+    //Take arguments from user function using helper functions argint, argstr
     struct proc *p;
     
     acquire(&ptable.lock);
@@ -14,18 +14,18 @@ int signalProcess(int proc_pid, char* sig)
       if(p->pid == proc_pid){
       //Now we will have made sure that p->pid is the pid of our process only.
 
-        if(//signal = pause)
+        if(/*signal = pause*/)
         {
           //Change state of p to something which will cause it to not run by scheduler
         }
 
-        else if(//signal = continue)
+        else if(/*signal = continue*/)
         {
           //Change state of p to running again.
 
         }
 
-        else if(//signal = kill)
+        else if(/*signal = kill*/)
         {      
           //Refer to kill system call
         }
