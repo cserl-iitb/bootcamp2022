@@ -59,3 +59,8 @@ Following are some basic Linux commands. To know more about them use: <code> man
     gcc cpu.c -o cpu
     ./cpu
     ```
+    This program runs in an infinite loop without terminating. Now open another terminal, run the <code>top</code> command and answer the following questions about the cpu process.
+
+    - What is the PID of the process running the cpu command?
+    - How much CPU and memory does this process consume?
+    - What is the current state of the process? For example, is it running or in a blocked state or a zombie state?
