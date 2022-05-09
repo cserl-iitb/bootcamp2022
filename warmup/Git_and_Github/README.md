@@ -66,12 +66,13 @@ Note: There are plenty of resources available online for more detailed reading. 
     - <code>git push -u origin \<new_branch\></code>
 
     - Now merge the \<new_branch\> into main by following below four commands: <br>
-        <code>
-        git checkout main \
-        git pull origin main \
-        git merge \<new_branch\> \
-        git push -u origin main
-        </code>
+        <code>git checkout main</code>
+
+        <code>git pull origin main</code>
+        
+        <code>git merge \<new_branch\></code>
+
+        <code>git push -u origin main</code>
 
     - <code>git tag</code> (This command will print <code>submission</code> on terminal. Lookup online to know more about what <code>git tag</code> does.) Note that it prints <code>submission</code> because the <code>submission</code> tag was already created in the original repository.
 
