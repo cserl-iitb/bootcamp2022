@@ -23,8 +23,8 @@ A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-sys
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check the **makefile** to see how the program wc is set up for compilation. (You can search for wc in the le to see what additions are made.)
 
-2. Modify the existing shell program **sh.c** in xv6 to change the shell prompt.
-&nbsp;&nbsp; E.g. : turtle$
+2. Modify the existing shell program **sh.c** in xv6 to change the shell prompt.<br />
+E.g. : turtle$
 
 **Hint** : Just search where the existing shell prompt **$** is and modify it.
 
