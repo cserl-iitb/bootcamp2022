@@ -11,7 +11,7 @@ Check out the **open** system call in **sysfile.c** that takes in multiple argum
 Also check **argint, argptr, argstr** functions and their descriptions in **syscall.c**.
 
 **Hints:** You will need to modify a number of different files for this exercise, though the total number of lines of code you will be adding is quite small.<br />
-At a minimum, you will need to alter **sysproc.c, syscall.h, syscall.c user.h** and **usys.S** to implement your new system calls.<br />
+At a minimum, you will need to alter **sysproc.c, syscall.h, syscall.c user.h** and **usys.S** to implement your new system calls.<br /><br />
 You can test your implementation with provided testcases: **hello.c** and **helloyou.c**
 
 ### Exploring OS State
