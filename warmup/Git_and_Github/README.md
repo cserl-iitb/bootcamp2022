@@ -55,7 +55,7 @@ Note: There are plenty of resources available online for more detailed reading. 
   
     - <code>cd git_assignment</code>
 
-    - <code>git checkout -b branch_name</code>
+    - <code>git checkout -b \<new_branch\></code> ( **-b** flag tells Git to run <code>git branch</code> before running <code>git checkout \<new_branch\></code>.)
 
     - Fix bug (test it) and add gitignore file to tells git to ignore a.out file.
 
@@ -63,13 +63,21 @@ Note: There are plenty of resources available online for more detailed reading. 
 
     - <code>git commit -m "bug fixed"</code>
 
-    - <code> git push -u origin branch_name</code>
+    - <code>git push -u origin \<new_branch\></code>
+
+    - Now merge the \<new_branch\> into main by following below four commands: <br>
+        <code>
+        git checkout main <br>
+        git pull origin main <br>
+        git merge \<new_branch\> <br>
+        git push -u origin main
+        </code>
 
     - <code>git tag</code> (This command will print <code>submission</code> on terminal. Lookup online to know more about what <code>git tag</code> does.) Note that it prints <code>submission</code> because the <code>submission</code> tag was already created in the original repository.
 
     - Now, delete the <code>submission</code> tag from both local and remote tags. Create new tag <code>final_submission</code> and push it on your repository.
 
-2. <code> Repository Creation</code>
+2. **Repository Creation**
 
     - Create a new private repository named \<Bootcamp_2022_trackname\> from your account. 
 
