@@ -52,11 +52,9 @@ Example usage:<br />
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have already defined the arguments to be passed to <code>exec</code> for you in _**cmd.c**_. You have to use them &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and implement the core logic in the provided block<br />
 ```
-...
 \\ Implement your code here
 ... your code ...
 \\
-...
 ```
 
 3. Modify the _**makefile**_ and test your implementations.
