@@ -1,11 +1,11 @@
-## Part A: User Programs in xv6
+# Part A: User Programs in xv6
 
 In this part we will learn how to 
 
 - Debug user programs and xv6 kernel under QEMU using GDB's remote debugging feature and QEMU's remote GDB debugging stub
 - Add new user programs to xv6
 
-### 1. Debugging user programs on xv6 with gdb
+## 1. Debugging user programs on xv6 with gdb
 Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.archive.org/web/20190308091152/http://zoo.cs.yale.edu:80/classes/cs422/2011/lec/l2-hw) for details on how to start de-bugging xv6 using gdb.
 1. In xv6 folder, run **make** followed by **make qemu-nox-gdb** to run the QEMU emulator in debug-mode.
 2. In other terminal, in the xv6 folder, run **gdb kernel**. This will automatically connect this gdb session to the xv6 session. If you see the error message as in figure 1, follow the on screen instruction and alter .gdbinit as suggested on screen and redo the steps.
@@ -22,7 +22,7 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
  
 Execute the user program **debug** and observe that the bubble sort implemented does not give the correct results. You have to find the bug and make the program give the correct result.
  
-### 2. Adding user programs in xv6
+## 2. Adding user programs in xv6
 <!--A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).-->
 After executing <code>make qemu</code> or <code>make qemu-nox</code> you will see a prompt. The prompt is the xv6 command line interface to execute user level programs. <br /> <br /> 
 We have provided a very simple user program _**testcase.c**_ which prints <code>Hello, world!</code> to the terminal and the modified _**makefile**_. <br />
