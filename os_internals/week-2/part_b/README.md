@@ -33,16 +33,11 @@ We will implement a system call get_siblings_info() which prints the details of 
 - Find process ID of the calling process.
 - Find process ID of the parent process of the calling process.
 - Traverse the list of PCBs and compare their parent PID with parent of calling process.<br /><br />
-Since this requires you to access the **ptable**, you will have to implement the main logic of your system call in **proc.c** le and then invoke this function from **sysproc.h**.
-
-To implement this system call, you will need to understand **struct ptable** from **proc.c** and **struct proc, enum procstate** from **proc.h**.
-
-**Note**: Details of calling process shouldn't be printed. Only sibling details should be printed.
-
-You are given a sample **my_siblings.c** program that takes an integer n, followed by a combination of 0, 1 and 2 of length n, as command line arguments. This program creates n+1 child processes, the first n child processes perform some task based on the input argument (0/1/2 specied for each of the n child processes). The last process executes your system call **get_siblings_info()** and displays the output.
-
-Add **my_siblings.c** as a user level program to test your implementation.
-
+Since this requires you to access the **ptable**, you will have to implement the main logic of your system call in **proc.c** le and then invoke this function from **sysproc.h**.<br /><br />
+To implement this system call, you will need to understand **struct ptable** from **proc.c** and **struct proc, enum procstate** from **proc.h**.<br /><br />
+**Note**: Details of calling process shouldn't be printed. Only sibling details should be printed.<br /><br />
+You are given a sample **my_siblings.c** program that takes an integer n, followed by a combination of 0, 1 and 2 of length n, as command line arguments. This program creates n+1 child processes, the first n child processes perform some task based on the input argument (0/1/2 specied for each of the n child processes). The last process executes your system call **get_siblings_info()** and displays the output.<br /><br />
+Add **my_siblings.c** as a user level program to test your implementation.<br /><br />
 **Sample run:**<br />
 $ my siblings 6 1 2 1 0 2 0 4 RUNNABLE<br />
 5 ZOMBIE<br />
