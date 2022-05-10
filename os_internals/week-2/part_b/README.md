@@ -22,14 +22,13 @@ acquire(&ptable . lock );<br />
 // Make use of the ptable structure<br />
 release(&ptable . lock ); // DO NOT FORGET THIS !!<br />
 ...<br />
-1. **got siblings?**<br />
-We will implement a system call get_siblings_info() which prints the details of siblings (pro- cesses forked from the same parent process) of the calling process to the console.
-
-get_siblings_info() should print process ID and process state of it's sibings in the follow- ing format.
-
-...
-
-Main Idea:
+1. **got siblings?**<br /><br />
+We will implement a system call get_siblings_info() which prints the details of siblings (pro- cesses forked from the same parent process) of the calling process to the console.<br /><br />
+**get_siblings_info()** should print process ID and process state of it's sibings in the following format.<br />
+**<pid> <procstate>**<br />
+**<pid> <procstate>**<br />
+...<br /><br />
+**Main Idea:**
 
 Find process ID of the calling process.
 Find process ID of the parent process of the calling process.
