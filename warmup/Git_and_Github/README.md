@@ -49,9 +49,21 @@ Note: There are plenty of resources available online for more detailed reading. 
 
 1. **Do you want to fix a bug?**
 
-    - Fork [this](https://github.com/rajagond/git_assignment) repository.
+    - Fork [this](https://github.com/rajagond/git_assignment) repository. <br>
 
-    - Clone your repository from github onto your local machine (use git clone \<fork_url\> command).
+
+    <p align="center">
+    <img src="./fork.png" width = "1024"/>
+    </p>
+
+
+    - Clone the repository you just created using fork from github onto your local machine (use git clone \<fork_url\> command). <br>
+
+
+    <p align="center">
+    <img src="./clone_repo.png" width = "1024"/>
+    </p>
+
   
     - <code>cd git_assignment</code>
 
@@ -90,10 +102,10 @@ Note: There are plenty of resources available online for more detailed reading. 
 
 2. **Repository Creation**
 
-    - Create a new private repository named \<Bootcamp_2022_trackname\> from your account. 
+    - Create a new private repository named **\<Bootcamp_2022_my_submission\>** from your account. 
 
     - Clone it on your local machine (use git clone \<url\> command).
   
     - Make a new folder named \<Week_1\> inside it. 
 
-    - Do add, commit and push as you progress on warmup assignment.
+    - Push your solutions onto your own repo.
