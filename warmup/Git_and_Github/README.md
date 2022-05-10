@@ -43,6 +43,9 @@ Send your changes to the remote repository.
     
 Get latest version from the remote repository. It helps you to avoid messing up your repository when you're in a collaboration.
 
+
+Note: You may encounter with <code>fatal: Authentication failed</code> error when you try to authenticate your GitHub account from the terminal. Follow the steps given in this [link](https://techexpertise.medium.com/github-authentication-failure-when-clone-fetch-pull-and-push-78181212b4e3) to resolve this issue or this [link](https://youtu.be/ytSoabxSQ6E) if you prefer watching video.
+
 Note: There are plenty of resources available online for more detailed reading. Feel free to look them up.
 
 ### Exercises
