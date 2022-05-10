@@ -94,7 +94,7 @@ Note: There are plenty of resources available online for more detailed reading. 
     - Now, delete the <code>submission</code> tag from both local and remote repo. <br>
         <code>git tag -d submission</code>(delete local tags)
 
-        <code>git push origin :/refs/tags/submission</code>(push changes to remote repo)
+        <code>git push origin :refs/tags/submission</code>(push changes to remote repo)
 
         Alternative approach to delete remote and local tags <br>
         <code>git push --delete origin submission</code>
