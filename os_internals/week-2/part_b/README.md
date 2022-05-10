@@ -1,10 +1,10 @@
-## Part B: New system calls in xv6
+# Part B: New system calls in xv6 #
 
 In this part we learn to add new system calls to the xv6 kernel.<br /> <br />
 Ready? Start by understanding the system call path followed when a system call is invoked. A simple tutorial is [xv6-system-calls-how-it-works](https://medium.com/@flag_seeker/xv6-system-calls-how-it-works-c541408f21ff). You don't need to understand everything, just get an overview of the flow through kernel code on invocation of a system call and which les need to be modied to add a new system call.<br /><br />
 Now look at an existing system call to understand how system calls are to be added. For example, look at how _**sysproc.c**_ implements system calls like <code>sys_fork</code> (which calls functions in other files).<br /><br />
 You will implement the following new system calls in xv6.<br />
-### Hello xv6 World!
+## Hello xv6 World! ##
 1. Implement a system call, called <code>hello()</code>, which prints <code>Hi! Welcome to the world of xv6!</code> to the console. You can use <code>cprintf</code> for printing in kernel mode.
 2. Next, we will implement a system call called <code>helloYou(name)</code> that takes an argument <code>char* name</code>. It prints name to the console. You can use <code>cprintf</code> for printing in kernel mode.<br /><br />
 Check out the <code>open</code> system call in _**sysfile.c**_ that takes in multiple arguments like strings and integers, and returns a simple integer value.<br />
@@ -14,7 +14,7 @@ Also check <code>argint, argptr, argstr</code> functions and their descriptions 
 At a minimum, you will need to alter _**sysproc.c, syscall.h, syscall.c user.h** and **usys.S**_ to implement your new system calls.<br /><br />
 You can test your implementation with provided testcases: _**hello.c**_ and _**helloyou.c**_
 
-### Exploring OS State
+## Exploring OS State ##
 We will be using the <code>struct ptable</code> in the remaining exercises. Whenever you access <code>ptable</code> you must hold a _lock_ - a synchronization primitive, before you start using it. Don't worry if you don't understand locks, we will learn about them in the upcoming weeks.<br />
 For now just make sure that if you need to use the <code>ptable</code> you follow the pattern :<br />
 ```
@@ -26,7 +26,7 @@ acquire(&ptable . lock );
 release(&ptable . lock ); // DO NOT FORGET THIS !!
 ...
 ```
-1. **got siblings?**<br /><br />
+### 1. **got siblings?**  
 We will implement a system call <code>get_siblings_info()</code> which prints the details of siblings (processes forked from the same parent process) of the calling process to the console.<br /><br />
 <code>get_siblings_info()</code> should print process ID and process state of it's siblings in the following format.<br />
 ```console
@@ -54,7 +54,7 @@ $ ./my_siblings 6 1 2 1 0 2 0
 9 SLEEPING
 ```
 
-2. **parameterizing system calls** (Optional)<br />
+### 2. **parameterizing system calls** (Optional)
 Implement a system call <code>get_ancestors()</code>, which takes a positive number n and a pointer to an integer array as arguments.<br />
 <code>get_ancestors(n, array)</code><br /><br />
 This system call writes the process IDs of n parents of the calling process to the given array. Parent of calling process is at level 1. You can assume that the size of array is su cient enough to hold the required details. If the number of ancestors is less than n, then the system call should collect PIDs till init process and return 0, otherwise, the system call should return 1.<br /><br />
