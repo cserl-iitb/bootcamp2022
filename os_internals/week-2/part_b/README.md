@@ -25,14 +25,13 @@ release(&ptable . lock ); // DO NOT FORGET THIS !!<br />
 1. **got siblings?**<br /><br />
 We will implement a system call get_siblings_info() which prints the details of siblings (pro- cesses forked from the same parent process) of the calling process to the console.<br /><br />
 **get_siblings_info()** should print process ID and process state of it's sibings in the following format.<br />
-**<pid> <procstate>**<br />
-**<pid> <procstate>**<br />
+**pid procstate**<br />
+**pid procstate**<br />
 ...<br /><br />
-**Main Idea:**
-
-Find process ID of the calling process.
-Find process ID of the parent process of the calling process.
-Traverse the list of PCBs and compare their parent PID with parent of calling process.
+**Main Idea:**<br /><br />
+    - Find process ID of the calling process.
+    - Find process ID of the parent process of the calling process.
+    - Traverse the list of PCBs and compare their parent PID with parent of calling process.
 Since this requires you to access the ptable, you will have to implement the main logic of your system call in proc.c le and then invoke this function from sysproc.h.
 
 To implement this system call, you will need to understand struct ptable from proc.c and struct proc, enum procstate from proc.h.
