@@ -33,37 +33,27 @@ We will implement a system call get_siblings_info() which prints the details of 
     - Find process ID of the parent process of the calling process.
     - Traverse the list of PCBs and compare their parent PID with parent of calling process.<br />
 
-Since this requires you to access the ptable, you will have to implement the main logic of your system call in proc.c le and then invoke this function from sysproc.h.
+Since this requires you to access the **ptable**, you will have to implement the main logic of your system call in **proc.c** le and then invoke this function from **sysproc.h**.
 
-To implement this system call, you will need to understand struct ptable from proc.c and struct proc, enum procstate from proc.h.
+To implement this system call, you will need to understand **struct ptable** from **proc.c** and **struct proc, enum procstate** from **proc.h**.
 
-Note: Details of calling process shouldn't be printed. Only sibling details should be printed.
+**Note**: Details of calling process shouldn't be printed. Only sibling details should be printed.
 
-You are given a sample my_siblings.c program that takes an integer n, followed by a combination of 0, 1 and 2 of length n, as command line arguments. This program creates n+1 child processes, the rst n child processes perform some task based on the input argument (0/1/2 specied for each of the n child processes). The last process executes your system call get_siblings_info()
+You are given a sample **my_siblings.c** program that takes an integer n, followed by a combination of 0, 1 and 2 of length n, as command line arguments. This program creates n+1 child processes, the first n child processes perform some task based on the input argument (0/1/2 specied for each of the n child processes). The last process executes your system call **get_siblings_info()** and displays the output.
 
-and displays the output.
+Add **my_siblings.c** as a user level program to test your implementation.
 
-Add my_siblings.c as a user level program to test your implementation.
+**Sample run:**<br />
+$ my siblings 6 1 2 1 0 2 0 4 RUNNABLE<br />
+5 ZOMBIE<br />
+6 RUNNABLE<br />
+7 SLEEPING<br />
+8 ZOMBIE<br />
+9 SLEEPING<br />
 
-Sample run:
-
-$ my siblings 6 1 2 1 0 2 0 4 RUNNABLE
-
-5 ZOMBIE
-
-6 RUNNABLE
-
-7 SLEEPING
-
-8 ZOMBIE
-
-9 SLEEPING
-
-parameterizing system calls (Optional - for those who want more challenge!) Implement a system call get_ancestors(), which takes a positive number n and a pointer
-to an integer array as arguments.
-
-get_ancestors(n, array)
-
+2. **parameterizing system calls** (Optional)<br />
+Implement a system call **get_ancestors()**, which takes a positive number n and a pointer to an integer array as arguments.<br />
+**get_ancestors(n, array)**<br /><br />
 This system call writes the process IDs of n parents of the calling process to the given array. Parent of calling process is at level 1. You can assume that the size of array is su cient enough
 
 to hold the required details. If the number of ancestors is less than n, then the system call should collect PIDs till init process and return 0, otherwise, the system call should return 1.
