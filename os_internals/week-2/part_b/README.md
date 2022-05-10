@@ -54,28 +54,17 @@ $ my siblings 6 1 2 1 0 2 0 4 RUNNABLE<br />
 2. **parameterizing system calls** (Optional)<br />
 Implement a system call **get_ancestors()**, which takes a positive number n and a pointer to an integer array as arguments.<br />
 **get_ancestors(n, array)**<br /><br />
-This system call writes the process IDs of n parents of the calling process to the given array. Parent of calling process is at level 1. You can assume that the size of array is su cient enough
-
-to hold the required details. If the number of ancestors is less than n, then the system call should collect PIDs till init process and return 0, otherwise, the system call should return 1.
-
-To pass parameters to system call, understand how it is done for other system calls. You will have to use argint and argptr in syscall.c that we learnt in 1(b) of Part B.
-
-Note: Make sure you handle the case when n is less than number of ancestors and you reach the init process.
-
-You are also given a sample user-level program my_ancestors.c which takes two numbers as command line arguments and uses the system call. The rst argument is depth of forking and
-
-the second is the parameter n passed to the system call. Add this as a user level program to xv6 and test your implementation.
-
-Sample runs:
-
-$ my_ancestors 6 10
-
-Process: 97
-
-Ancestors: 95 89 83 77 71 65 2 1 Return value: 0
-
-the my_ancestors program creates 6 child process in a recursive manner and the get_ancestors(n, buf) system call is invoked from the 6th child process. Here, pid of the parent process is 65 and parent
-
-pid of 6th child process is 95.
-
-$ my_ancestors 5 3 Process: 59 Ancestors: 58 52 46 Return value: 1
+This system call writes the process IDs of n parents of the calling process to the given array. Parent of calling process is at level 1. You can assume that the size of array is su cient enough to hold the required details. If the number of ancestors is less than n, then the system call should collect PIDs till init process and return 0, otherwise, the system call should return 1.<br /><br />
+To pass parameters to system call, understand how it is done for other system calls. You will have to use **argint** and **argptr** in **syscall.c** that we learnt in 1(b) of Part B.<br /><br />
+**Note:** Make sure you handle the case when n is less than number of ancestors and you reach the init process.<br /><br />
+You are also given a sample user-level program **my_ancestors.c** which takes two numbers as command line arguments and uses the system call. The rst argument is depth of forking and the second is the parameter n passed to the system call. Add this as a user level program to xv6 and test your implementation.<br /><br />
+**Sample runs:**<br />
+$ my_ancestors 6 10<br />
+Process: 97<br />
+Ancestors: 95 89 83 77 71 65 2 1<br />
+Return value: 0<br />
+the **my_ancestors** program creates 6 child process in a recursive manner and the **get_ancestors(n, buf)** system call is invoked from the 6th child process. Here, pid of the parent process is 65 and parent pid of 6th child process is 95.<br /><br />
+**$ my_ancestors 5 3<br />
+Process: 59<br />
+Ancestors: 58 52 46<br />
+Return value: 1**
