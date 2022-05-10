@@ -1,10 +1,9 @@
 ## OS Internals Track Week-2
 
-### Material for the week:
+### Background Material for the week:
 
 - You must cover these - Lectures 1, 2, 22, 3, 23, 4 from [Lectures on Operating Systems](https://www.cse.iitb.ac.in/~mythili/os/), in the order specied here.
 - (Optional) Chapters 0, 1 from [this book](https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf)
-- Link to the [PDF formatted xv6 source code](https://pdos.csail.mit.edu/6.828/2017/xv6/xv6-rev10.pdf) if you want the whole xv6 kernel code in one place. This doesn't include the user programs like **ls, echo** etc.
 
 ### Before you begin the assignment:
 
