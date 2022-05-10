@@ -30,9 +30,9 @@ We will implement a system call get_siblings_info() which prints the details of 
 ...<br />
 
 **Main Idea:**<br />
-    - Find process ID of the calling process.
-    - Find process ID of the parent process of the calling process.
-    - Traverse the list of PCBs and compare their parent PID with parent of calling process.<br /><br />
+- Find process ID of the calling process.
+- Find process ID of the parent process of the calling process.
+- Traverse the list of PCBs and compare their parent PID with parent of calling process.<br /><br />
 Since this requires you to access the **ptable**, you will have to implement the main logic of your system call in **proc.c** le and then invoke this function from **sysproc.h**.
 
 To implement this system call, you will need to understand **struct ptable** from **proc.c** and **struct proc, enum procstate** from **proc.h**.
