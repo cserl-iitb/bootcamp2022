@@ -55,7 +55,7 @@ Note: There are plenty of resources available online for more detailed reading. 
   
     - <code>cd git_assignment</code>
 
-    - <code>git checkout -b \<new_branch\></code> ( **-b** flag tells Git to run <code>git branch</code> before running <code>git checkout \<new_branch\></code>.)
+    - <code>git checkout -b \<new_branch\></code> ( **-b** flag tells Git to run <code>git branch \<new_branch\></code> before running <code>git checkout \<new_branch\></code>.)
 
     - Fix bug (test it) and add gitignore file to tells git to ignore a.out file.
 
