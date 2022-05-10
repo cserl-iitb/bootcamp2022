@@ -96,4 +96,4 @@ Note: There are plenty of resources available online for more detailed reading. 
   
     - Make a new folder named \<Week_1\> inside it. 
 
-    - Do add, commit and push as you progress on this assignment.
+    - Do add, commit and push as you progress on warmup assignment.
