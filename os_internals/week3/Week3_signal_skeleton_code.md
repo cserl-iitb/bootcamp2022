@@ -1,5 +1,7 @@
 This is the skeleton code of the 3rd question of this week's task. You can copy this into your text editor and start working on it. Ignore the commands `acquire(&ptable.lock)` and `release(&ptable.lock)` for now. You will learn about these in the later weeks.
 
+The approach to follow here is to define a new int variable in the struct proc which will store the value of a integer, which will signify the scheduler code whether to pause, or continue. So accordingly you have to add a line in the scheduler function that on some given value of the variable break from the for loop so that the scheduler doesn't run the process again. 
+
 ```c
 int signalProcess(int proc_pid, char* sig)
 {
@@ -16,18 +18,19 @@ int signalProcess(int proc_pid, char* sig)
 
         if(/*signal = pause*/)
         {
-          //Change state of p to something which will cause it to not run by scheduler
+          //Change the value of the varibale in the struct proc to some integer say 1 which will signify pausing
         }
 
         else if(/*signal = continue*/)
         {
-          //Change state of p to running again.
+          //Change the value of the varibale in the struct proc to some integer say 0 which will signify continue or not paused
 
         }
 
         else if(/*signal = kill*/)
         {      
           //Refer to kill system call
+          //Also remember to change the value of the varibale in the struct proc to some integer say 0 which will signify continue or not paused
         }
 
       }
