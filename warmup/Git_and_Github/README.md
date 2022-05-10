@@ -52,7 +52,7 @@ Note: There are plenty of resources available online for more detailed reading. 
 
 1. **Do you want to fix a bug?**
 
-    - Fork [this](https://github.com/rajagond/git_assignment) repository. <br>
+    - Fork [this](https://github.com/rajagond/git_assignment) repository. This will create a copy of repository on your account. <br>
 
 
     <p align="center">
@@ -60,7 +60,7 @@ Note: There are plenty of resources available online for more detailed reading. 
     </p>
 
 
-    - Clone the repository you just created using fork from github onto your local machine (use git clone \<fork_url\> command). <br>
+    - Clone the repository you just created using fork from your github account onto your local machine (use git clone \<fork_url\> command). <br>
 
 
     <p align="center">
