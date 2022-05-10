@@ -4,13 +4,13 @@ CSERL: www.cse.iitb.ac.in/cserl
 
 This repository has detailed listing of week;y exercises for the bootcamp. 
 
-Note that all discussions for exercises are on Piazza.
-Piazza course links: 
+Note that all discussions for exercises are on Piazza.  
+Piazza course links:   
 1. Application software track
 2. OS Internal track
 
-Weekly (online) meeting schedule is a follows:
-1.
-2.
+Weekly (online) meeting schedule is a follows:  
+1.  
+2.  
 
-More queries contact:  
+For queries contact:  
