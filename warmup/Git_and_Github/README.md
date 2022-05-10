@@ -76,7 +76,17 @@ Note: There are plenty of resources available online for more detailed reading. 
 
     - <code>git tag</code> (This command will print <code>submission</code> on terminal. Lookup online to know more about what <code>git tag</code> does.) Note that it prints <code>submission</code> because the <code>submission</code> tag was already created in the original repository.
 
-    - Now, delete the <code>submission</code> tag from both local and remote tags. Create new tag <code>final_submission</code> and push it on your repository.
+    - Now, delete the <code>submission</code> tag from both local and remote repo. <br>
+        <code>git tag -d submission</code>(delete local tags)
+
+        <code>git push origin :/refs/tags/submission</code>(push changes to remote repo)
+
+        Alternative approach to delete remote and local tags <br>
+        <code>git push --delete origin submission</code>
+
+        <code>git tag -d submission</code>
+        
+    - Create a new tag <code>final_submission</code> and push it on your repository.
 
 2. **Repository Creation**
 
