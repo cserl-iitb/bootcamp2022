@@ -1,7 +1,7 @@
 # Part B: New system calls in xv6 #
 
 In this part we learn to add new system calls to the xv6 kernel.<br /> <br />
-Ready? Start by understanding the system call path followed when a system call is invoked. A simple tutorial is [xv6-system-calls-how-it-works](https://medium.com/@flag_seeker/xv6-system-calls-how-it-works-c541408f21ff). You don't need to understand everything, just get an overview of the flow through kernel code on invocation of a system call and which les need to be modied to add a new system call.<br /><br />
+Ready? Start by understanding the system call path followed when a system call is invoked. A simple tutorial is [xv6-system-calls-how-it-works](https://medium.com/@flag_seeker/xv6-system-calls-how-it-works-c541408f21ff). You don't need to understand everything, just get an overview of the flow through kernel code on invocation of a system call and which files need to be modied to add a new system call.<br /><br />
 Now look at an existing system call to understand how system calls are to be added. For example, look at how _**sysproc.c**_ implements system calls like <code>sys_fork</code> (which calls functions in other files).<br /><br />
 You will implement the following new system calls in xv6.<br />
 ## Hello xv6 World! ##
