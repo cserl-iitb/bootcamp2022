@@ -6,6 +6,12 @@ In this part we will learn how to
 - Add new user programs to xv6
 
 ## 1. Debugging user programs on xv6 with gdb
+**Note**: For this question, in the Makefile, replace the line where `CCFLAGS` is first defined with:
+```
+CFLAGS = -fno-pic -static -fno-builtin -fno-strict-aliasing -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -gdwarf-2 -fno-inline-small-functions -O0
+```
+and change number of CPUs to 1 (replacing `CPUS := 2` with `CPUS := 1`).
+
 Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.archive.org/web/20190308091152/http://zoo.cs.yale.edu:80/classes/cs422/2011/lec/l2-hw) for details on how to start de-bugging xv6 using gdb.
 
 [This video](https://drive.google.com/file/d/1gkn6y4VSBh_py3wMYMrM2QFrE2vbYMpl/view?usp=sharing) traces the open system call using the ls program using gdb.
