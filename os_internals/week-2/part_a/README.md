@@ -24,8 +24,8 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
 - In XV-6 terminal run **$ ls**.
 - You can now use the gdb commands as learnt in Week 1 assignment to debug further.
 
-Now, Give answers to the following questions:<br />
-1. Which system call is used in ls and also what is it's number?
+Now, Give answers to the following questions while tracing the execution of the fstat system call in ls:<br />
+1. What is the number of fstat system call?
 2. At what address of instruction will we return from kernel state to user space and where that address is stored in trap frame? 
 3. print trap frame and tell where the system call number is stored in it?
 4. print file object in filestat function to see whether the file is readable/writable.
