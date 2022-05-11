@@ -17,7 +17,7 @@ You may want to look at [Before You Begin](Before_You_Begin/README.md) section f
 You need to go through the Thread Creation Tutorial given in [Before You Begin](../Before_You_Begin/README.md) Section and familiarise yourself with pthread_create() and pthread_join() functions.
 
 
-## Implementation of step 2 (Queueing and Pthread Synchronization)
+## Implementation of steps 2 and 3 (Queueing and Pthread Synchronization)
 
 You should be familiar with the implementation of Queue in cpp. The following cpp [reference](https://www.cplusplus.com/reference/queue/queue/) may help. For the conditional variables and the mutex locking, Go through the Pthraed Synchronization Tutorial given in [Before You Begin](../Before_You_Begin/README.md) Section.
 
