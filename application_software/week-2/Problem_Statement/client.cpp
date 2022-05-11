@@ -3,17 +3,10 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h> 
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <fcntl.h>
-#include <pthread.h>
-
-struct host_port
-{
-    char* hostname;
-    int port;
-};
+using namespace std;
 
 void error(char *msg)
 {
@@ -21,58 +14,64 @@ void error(char *msg)
     exit(0);
 }
 
-
-void *clientThread(void* server_hostport)
+int main(int argc, char *argv[])
 {
     int sockfd, portno, n;
+
     struct sockaddr_in serv_addr;
     struct hostent *server;
+
     char buffer[256];
+    if (argc < 3) {
+       fprintf(stderr,"usage %s hostname port\n", argv[0]);
+       exit(0);
+    }
 
-    struct host_port* hostport = (host_port*)server_hostport;
+    /* create socket, get sockfd handle */
 
-    char *hostname = hostport->hostname;
-    portno = hostport->port;
-
+    portno = atoi(argv[2]);
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0) 
+        error("ERROR opening socket");
 
-    if (sockfd < 0)error("ERROR opening socket");
+    /* fill in server address in sockaddr_in datastructure */
 
-    server = gethostbyname(hostname);
+    server = gethostbyname(argv[1]);
     if (server == NULL) {
         fprintf(stderr,"ERROR, no such host\n");
         exit(0);
     }
     bzero((char *) &serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
+    bcopy((char *)server->h_addr, 
+         (char *)&serv_addr.sin_addr.s_addr,
+         server->h_length);
     serv_addr.sin_port = htons(portno);
 
+    /* connect to server */
 
-    if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0) error("ERROR connecting");
+    if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0) 
+        error("ERROR connecting");
 
-    strcpy(buffer,"Hello");
+    /* ask user for input */
+
+    printf("Please enter the message: ");
+    bzero(buffer,256);
+    fgets(buffer,255,stdin);
+
+    /* send user message to server */
 
     n = write(sockfd,buffer,strlen(buffer));
     if (n < 0) 
-        error("ERROR writing to socket");
-    bzero(buffer, 256);
+         error("ERROR writing to socket");
+    bzero(buffer,256);
 
+    /* read reply from server */
 
     n = read(sockfd,buffer,255);
     if (n < 0) 
          error("ERROR reading from socket");
     printf("%s\n",buffer);
 
-}
-
-
-int main(int argc, char *argv[])
-{
-    /* TO DO: Create a thread for each client */
-    /* TO DO: At a time atmost 50 threads can be working concurrently, your code must incorporate that */
-    /* TO DO: Sleep for 20 seconds after generating 50 threads and then join the threads */
-    /* TO DO: Each Thread starts executing clientThread() */ 
-    /* You may use pthread_mutex_lock() and pthread_mutex_unlock() to protect the shared resource */
     return 0;
 }

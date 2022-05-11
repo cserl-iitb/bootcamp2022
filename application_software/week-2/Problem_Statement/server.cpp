@@ -1,17 +1,11 @@
-
 #include <stdio.h>
 #include <sys/types.h> 
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <pthread.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <fcntl.h>
-
-char client_message[2000]; // buffer to store client message
-char buffer[1024]; // buffer to store data
-pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER; // mutex for critical section
+using namespace std;
 
 void error(char *msg)
 {
@@ -19,23 +13,10 @@ void error(char *msg)
     exit(1);
 }
 
-void *socketThread(void *arg)
-{
-    int newsockfd = *(int *)arg;
-
-    /* UNIMPLEMENTED: TO DO */
-    /* read a message from the client and store it in client_message */
-    /* Use pthread_mutex_lock and pthread_mutex_unlock to lock and unlock the critical section */
-    /* send the message "Read from Client: {client_message}" (stored in buffer) back to the client */
-    /* close the socket */
-
-}
-
 int main(int argc, char *argv[])
 {
-     int sockfd, newsockfd, portno;
-     socklen_t clilen;
-   
+     int sockfd, newsockfd, portno, clilen;
+     char buffer[256];
      struct sockaddr_in serv_addr, cli_addr;
      int n;
      if (argc < 2) {
@@ -65,25 +46,25 @@ int main(int argc, char *argv[])
      
      /* listen for incoming connection requests */
 
-    if(listen(sockfd,50)==0)printf("Listening\n");
-    else printf("Error\n");
+     listen(sockfd,5);
+     clilen = sizeof(cli_addr);
 
-    pthread_t tid[51];
-    int i =0;
+     /* accept a new request, create a newsockfd */
 
-    while(1)
-    {
-        clilen = sizeof(cli_addr);
-        newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
-        if (newsockfd < 0) error("ERROR on accept");
+     newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
+     if (newsockfd < 0) 
+          error("ERROR on accept");
 
-        /* TO DO: Create a thread for each client */
-        /* TO DO: Each Thread starts executing function socketThread */
-        /* TO DO: Each Thread should pass the socket descriptor as an argument */
-       
-        
-        /* TO DO: Join the threads if 50 threads are created and running */
-       
-    }
+     /* read message from client */
 
+     bzero(buffer,256);
+     n = read(newsockfd,buffer,255);
+     if (n < 0) error("ERROR reading from socket");
+     printf("Here is the message: %s\n",buffer);
+
+     /* send reply to client */
+
+     n = write(newsockfd,"I got your message",18);
+     if (n < 0) error("ERROR writing to socket");
+     return 0; 
 }
