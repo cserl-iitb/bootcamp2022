@@ -69,7 +69,9 @@ Next, use locks when accessing the shared counter and verify that the counter is
 ## Relavant Reading
 
 [Introduction to threads and concurrency](https://youtu.be/SVHLonf5AGY)
+
 [Locks](https://youtu.be/EBevKfTDXUI)
+
 [Mutex lock for Linux Thread Synchronization](https://www.geeksforgeeks.org/mutex-lock-for-linux-thread-synchronization/)
 
 
@@ -88,6 +90,7 @@ Please Read section 27.4 of [Thread API](https://pages.cs.wisc.edu/~remzi/OSTEP/
 
 ## Relavant Reading
 [Condition Variables](https://youtu.be/rMpOfbaP2PQ)
+
 [Conditional wait and signal in multi-threading](https://www.geeksforgeeks.org/condition-wait-signal-multi-threading/)
 
 
