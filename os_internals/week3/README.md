@@ -3,7 +3,7 @@
 Welcome to the task of week-3. Till now you have installed xv6 and have written some basic system calls, which may have given you an idea of how processes in an operating system works in general. Even if you don’t feel confident working with xv6 yet, don’t worry, just keep learning and practising and you will slowly start getting a hang of it. 
 There is no extra reading material for this week, just follow the previous week's content. In addition to it, you can refer the OSTEP textbook chapters mentioned alongside the respective lectures on [Lectures on Operating Systems](https://www.cse.iitb.ac.in/~mythili/os/)(This is really a very good reading material, and it is strongly suggested to follow it). 
 
-Moving on to the task for this week. This week you will improve upon the system calls and will implement a mechanism to communicate with or signal between two system calls. There is an optional problem at the end which you can attempt for extra challenge.
+Moving on to the task for this week. This week you will improve upon the system calls and will implement a mechanism to communicate with or signal between two system calls. There is an optional problem at the end which you can attempt for extra challenge. The tasks here start from easy level and the difficulty or complexity would keep on increasing as you go further. Have a good time learning and exploring!
 
 <hr>
 
