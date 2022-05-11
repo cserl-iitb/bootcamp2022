@@ -1,6 +1,6 @@
-This is the skeleton code of the 3rd question of this week's task. You can copy this into your text editor and start working on it. Ignore the commands `acquire(&ptable.lock)` and `release(&ptable.lock)` for now. You will learn about these in the later weeks.
+This is the skeleton code of the 3rd task of this week. You can copy this into your text editor and start working on it. Ignore the commands `acquire(&ptable.lock)` and `release(&ptable.lock)` for now. You will learn about these in the later weeks.
 
-The approach to follow here is to define a new int variable in the struct proc which will store the value of a integer, which will signify the scheduler code whether to pause, or continue. So accordingly you have to add a line in the scheduler function that on some given value of the variable break from the for loop so that the scheduler doesn't run the process again. 
+The approach to follow here is to define a new int variable in the struct proc which will store the value of a integer, which will be used to compare in the scheduler code, and decide whether to pause, or continue. So accordingly you have to add a line in the scheduler function that on some given value of the variable, break from the for loop, so that the scheduler doesn't run the process again till the value of that variable is changed again.
 
 ```c
 int signalProcess(int proc_pid, char* sig)
