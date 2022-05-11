@@ -19,8 +19,8 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
  
 - Run **(gdb) symbol-file _ls**.
 - Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
-- Now in XV-6 terminal run **$ ls**.
-- Now you can use the gdb commands as learnt in Week 1 assignment to debug further.
+- In XV-6 terminal run **$ ls**.
+- You can now use the gdb commands as learnt in Week 1 assignment to debug further.
 
 Now, Give answers to the following questions:<br />
 1. Which system call is used in ls and also what is it's number?
