@@ -10,9 +10,6 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
 - In xv6 folder, run **make** followed by **make qemu-nox-gdb** to run the QEMU emulator in debug-mode.
 - In other terminal, in the xv6 folder, run **gdb kernel**. This will automatically connect this gdb session to the xv6 session. If you see the error message as in figure 1, follow the on screen instruction and alter .gdbinit as suggested on screen and redo the steps.
 - If the gdb sesssion does not connect to the xv6 session automatically, from the gdb interface run **(gdb) target remote localhost:26000** where 26000 is the TCP port that step 1 reported at the end (this might change).
-- Load the user executable with **(gdb) file debug.o.**
-- Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
-- Now you can use the gdb commands as learnt in Week 1 assignment to debug further.
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/81876291/167428724-d25223ec-4685-47a4-8935-b676d4815167.png">
 </p>
@@ -20,8 +17,10 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
   Figure 1: GDB auto loading declined
 </p>
  
-- Run **(gdb) symbol-file _ls** then **(gdb) break main** then **(gdb) continue**.
+- Run **(gdb) symbol-file _ls**.
+- Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
 - Now in XV-6 terminal run **$ ls**.
+- Now you can use the gdb commands as learnt in Week 1 assignment to debug further.
 
 Now, Give answers to the following questions:<br />
 1. Which system call is used in ls and also what is it's number?
