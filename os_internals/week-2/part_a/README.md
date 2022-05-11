@@ -7,6 +7,8 @@ In this part we will learn how to
 
 ## 1. Debugging user programs on xv6 with gdb
 Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.archive.org/web/20190308091152/http://zoo.cs.yale.edu:80/classes/cs422/2011/lec/l2-hw) for details on how to start de-bugging xv6 using gdb.
+
+[This video](https://drive.google.com/file/d/1gkn6y4VSBh_py3wMYMrM2QFrE2vbYMpl/view?usp=sharing) traces the open system call using the ls program using gdb.
 - In xv6 folder, run **make** followed by **make qemu-nox-gdb** to run the QEMU emulator in debug-mode.
 - In other terminal, in the xv6 folder, run **gdb kernel**. This will automatically connect this gdb session to the xv6 session. If you see the error message as in figure 1, follow the on screen instruction and alter .gdbinit as suggested on screen and redo the steps.
 - If the gdb sesssion does not connect to the xv6 session automatically, from the gdb interface run **(gdb) target remote localhost:26000** where 26000 is the TCP port that step 1 reported at the end (this might change).
