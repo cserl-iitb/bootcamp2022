@@ -7,12 +7,9 @@ In this part we will learn how to
 
 ## 1. Debugging user programs on xv6 with gdb
 Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.archive.org/web/20190308091152/http://zoo.cs.yale.edu:80/classes/cs422/2011/lec/l2-hw) for details on how to start de-bugging xv6 using gdb.
-1. In xv6 folder, run **make** followed by **make qemu-nox-gdb** to run the QEMU emulator in debug-mode.
-2. In other terminal, in the xv6 folder, run **gdb kernel**. This will automatically connect this gdb session to the xv6 session. If you see the error message as in figure 1, follow the on screen instruction and alter .gdbinit as suggested on screen and redo the steps.
-3. If the gdb sesssion does not connect to the xv6 session automatically, from the gdb interface run **(gdb) target remote localhost:26000** where 26000 is the TCP port that step 1 reported at the end (this might change).
-4. Load the user executable with **(gdb) file debug.o.**
-5. Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
-6. Now you can use the gdb commands as learnt in Week 1 assignment to debug further.
+- In xv6 folder, run **make** followed by **make qemu-nox-gdb** to run the QEMU emulator in debug-mode.
+- In other terminal, in the xv6 folder, run **gdb kernel**. This will automatically connect this gdb session to the xv6 session. If you see the error message as in figure 1, follow the on screen instruction and alter .gdbinit as suggested on screen and redo the steps.
+- If the gdb sesssion does not connect to the xv6 session automatically, from the gdb interface run **(gdb) target remote localhost:26000** where 26000 is the TCP port that step 1 reported at the end (this might change).
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/81876291/167428724-d25223ec-4685-47a4-8935-b676d4815167.png">
 </p>
@@ -20,7 +17,16 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
   Figure 1: GDB auto loading declined
 </p>
  
-Execute the user program **debug** and observe that the bubble sort implemented does not give the correct results. You have to find the bug and make the program give the correct result.
+- Run **(gdb) symbol-file _ls**.
+- Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
+- In XV-6 terminal run **$ ls**.
+- You can now use the gdb commands as learnt in Week 1 assignment to debug further.
+
+Now, Give answers to the following questions:<br />
+1. Which system call is used in ls and also what is it's number?
+2. At what address of instruction will we return from kernel state to user space and where that address is stored in trap frame? 
+3. print trap frame and tell where the system call number is stored in it?
+4. print file object in filestat function to see whether the file is readable/writable.
  
 ## 2. Adding user programs in xv6
 <!--A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).-->

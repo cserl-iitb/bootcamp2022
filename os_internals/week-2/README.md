@@ -5,7 +5,7 @@ In this week you will learn about
 - Process abstraction and processes in xv6
 - System calls for process management and use a couple of xv6 system calls
 - Adding new user programs and new system calls in xv6 
-- Debugging xv6 user code and kernel code with gdb. We will learn
+- Debugging xv6 user code and kernel code with gdb.
 
 
 ### Background Material for the week:
@@ -18,7 +18,7 @@ In this week you will learn about
   - _**syscall.h**_ contains a mapping from system call name to system call number. Every system call must have a number assigned here.
   - _**syscall.c**_ contains helper functions to parse system call arguments, and pointers to the actual system call implementations.
   - _**sysproc.c**_ contains the implementations of process related system calls. All the new system calls that you add will be implemented here.
-  - _**defs.h**_ is a header le with function denitions in the kernel.
+  - _**defs.h**_ is a header file with function denitions in the kernel.
   - _**proc.h**_ contains the struct proc structure.
   - _**proc.c**_ contains implementations of various process related system calls, and the scheduler function. This file also contains the denition of <code>ptable</code>, so any code that must traverse the process list in xv6 must be written here.
 
