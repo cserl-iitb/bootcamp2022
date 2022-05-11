@@ -17,8 +17,7 @@ Again, the problem statement has been designed to encourage learning. Do not hes
 
 - Make sure you have the [source code](http://www.cse.iitb.ac.in/~puru/courses/autumn18/labs/xv6-public.tar.gz) for xv6, and that you know how to compile and run it
 - You would be creating new system calls for this task, so make sure you understand the steps involved in doing so. (You have learnt this in Weeks 2 and 3)
-- We have modified some xv6 files for this lab, and these patched files are provided as part of this lab’s code. Before you begin the lab, copy the patched files into the main xv6 code directory.
-- We have provided a `testcase.c` as part of the code for this lab, make sure to add it to the `Makefile` when compiling the code. You should be able to run it on the xv6 shell by typing `testcase` into it.
+- This lab’s code is present in `test-code` folder, and contains the following files: `Makefile`, `syscall.c`, `syscall.h`, `sysproc.c`, `test.c`, `user.h` and `usys.s`. These files add new system calls for the second part of the lad, and implements a new global counter that needs to be synchronized. 
 
 
 
@@ -61,9 +60,11 @@ You are allowed to use the atomic `xchg()` function in your implementation of th
 
   Check the status of the custom spinlock denoted by identifier `id`. Return 0 if the lock is not currently held by any process, 1 if the lock is held by some process and -1 in other cases. (Such as checking the status of a lock that was not initialized)
 
-The `testcase.c` file provided spawns two processes, one a child of the other. The patched files add two new system calls, `init_counter()` and `set_counter()`. The former initializes a global counter and sets its value to 0 and `set_counter(x)` sets the value of the counter to `x`.
+The `test.c` file provided spawns two processes, one a child of the other. The patched files add two new system calls, `init_counter()` and `set_counter()`. The former initializes a global counter and sets its value to 0 and `set_counter(x)` sets the value of the counter to `x`.
 
 It creates two processes which try to increment the global counter at once. This is a race condition, therefore running the testcase without locking the global variable would give a result that is less than expected. After locking the critical sections of the code however, the result should be the same every time.
+
+After implementing the system calls given above, you need to modify `test.c` to use the locks implemented by you to correctly increment the counter.
 
 ### Hint
 
