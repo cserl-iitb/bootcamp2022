@@ -21,13 +21,13 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
 </p>
  
 7. Run **(gdb) symbol-file _ls** then **(gdb) break main** then **(gdb) continue**.
-8. Now in XV-6 terminal run **$ ls**.<br />
+8. Now in XV-6 terminal run **$ ls**.
 
-Give answers to the following questions:
-    1. Which system call is used and also what is it's number?
-    2. At what address of instruction will we return from kernel state to user space when we and where that address is stored in trap frame? 
-    3. print trap frame and tell where the system call number is stored in it?
-    4. print file object in filestat function to see whether the file is readable/writable.
+Now, Give answers to the following questions:<br />
+1. Which system call is used in ls and also what is it's number?
+2. At what address of instruction will we return from kernel state to user space and where that address is stored in trap frame? 
+3. print trap frame and tell where the system call number is stored in it?
+4. print file object in filestat function to see whether the file is readable/writable.
  
 ## 2. Adding user programs in xv6
 <!--A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).-->
