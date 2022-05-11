@@ -1,7 +1,9 @@
 # Week-3
 
 Welcome to the task of week-3. Till now you have installed xv6 and have written some basic system calls, which may have given you an idea of how processes in an operating system works in general. Even if you don’t feel confident working with xv6 yet, don’t worry, just keep learning and practising and you will slowly start getting a hang of it. 
-Now let’s move on to the task of this week. This week you will improve upon the system calls and will implement a mechanism to communicate with or signal between two system calls.
+There is no extra reading material for this week, just follow the previous week's content. In addition to it, you can refer the OSTEP textbook chapters mentioned alongside the respective lectures on [Lectures on Operating Systems](https://www.cse.iitb.ac.in/~mythili/os/)(This is really a very good reading material, and it is strongly suggested to follow it). 
+
+Moving on to the task for this week. This week you will improve upon the system calls and will implement a mechanism to communicate with or signal between two system calls. There is an optional problem at the end which you can attempt for extra challenge.
 
 <hr>
 
@@ -42,4 +44,7 @@ _Remember:_
 1. Whenever you try to write a new system call, you have to repeat all the steps of writing a new system call which you learnt last week.
 2. Do not pass arguments directly, you have to use helper functions argint, argstr.
 
+## 4. How much time should the process be paused?(optional)
+
+This is a continuation of the previous part. The aim here is to define a new system call `pause(pid, duration)`, which would pause the process with the given PID for the given duration of time. The unit of duration here will be 'ticks'. Tick is the unit of time that after which a timer interrupts the CPU, periodically. You will be needed to use the system call `uptime`. Refer to it and see what does it do. There is no skeleton code provided for this part. The test code for this task is named `timed-pause.c`.
 
