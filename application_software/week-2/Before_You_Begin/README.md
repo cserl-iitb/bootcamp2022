@@ -22,6 +22,9 @@ Go through the specific functions and arguments required from blogs [Learning So
 
 Feel free to go through socket programming basics from [Beej’s Guide to Network Programming](https://beej.us/guide/bgnet/html/). You can also see simple examples of socket programs in the prescribed textbook [Peterson and Davie, Sec 1.4](https://book.systemsapproach.org/foundation/software.html?highlight=socket#application-programming-interface-sockets).
 
+## Suggested Reading
+[Network I/O using sockets](https://youtu.be/2TrQXSFgqBY)
+
 
 # Thread Creation
 
@@ -65,6 +68,8 @@ Next, use locks when accessing the shared counter and verify that the counter is
 
 ## Relavant Reading
 
+[Introduction to threads and concurrency](https://youtu.be/SVHLonf5AGY)
+[Locks](https://youtu.be/EBevKfTDXUI)
 [Mutex lock for Linux Thread Synchronization](https://www.geeksforgeeks.org/mutex-lock-for-linux-thread-synchronization/)
 
 
@@ -82,7 +87,7 @@ Locks allow only one type of synchronization between threads which is mutual exc
 Please Read section 27.4 of [Thread API](https://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf) and get familiarised with the logic and functions involved.
 
 ## Relavant Reading
-
+[Condition Variables](https://youtu.be/rMpOfbaP2PQ)
 [Conditional wait and signal in multi-threading](https://www.geeksforgeeks.org/condition-wait-signal-multi-threading/)
 
 
