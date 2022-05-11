@@ -50,7 +50,7 @@ _Steps to solve:_
 
 ## 4. How much time should the process be paused?(optional)
 
-So for those of you who have finished all the previous tasks, this is for you. This is a continuation of the previous part(signalling). The aim here is to define a new system call `pause(pid, duration)`, which would pause the process with the given PID as argument for the given duration of time. The unit of duration here will be 'ticks'. Tick is the unit of time that after which a timer interrupts the CPU, periodically. Don't worry about this much. You will need to use the system call `uptime`. Refer to it and see what does it do. There is no skeleton code provided for this part. The test code for this task is named `timed-pause.c`.
+So for those of you who have finished all the previous tasks, this is for you. This is a continuation of the previous part(signalling). The aim here is to define a new system call `pause(pid, duration)`, which would pause the process with the given PID as argument for the given duration of time. The unit of duration here will be 'ticks'. Tick is the unit of time that after which a timer interrupts the CPU, periodically. Don't worry about this much. You will need to use the system call `uptime`. Refer to it and see what does it do. There is no skeleton code provided for this part. The test code for this task is named `timed_pause.c`.
 
 _Hint:_
 Note what does `uptime` do. You may need to take the difference of the _ticks_ values and compare it with the duration passed in the `pause` system call.
