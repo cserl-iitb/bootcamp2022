@@ -30,12 +30,12 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
 - In XV-6 terminal run **$ ls**.
 - You can now use the gdb commands as learnt in Week 1 assignment to debug further.
 
-Now, Give answers to the following questions while tracing the execution of the fstat system call in ls:<br />
-1. What is the number of fstat system call?
-2. At what address of instruction will we return from kernel state to user space and where that address is stored in trap frame? 
-3. print trap frame and tell where the system call number is stored in it?
-4. print file object in filestat function to see whether the file is readable/writable.
- 
+Now, add the provided _**debug.c**_ in the _**Makefile**_ like other testcases and give answers to the following questions while tracing the execution of the fork system call in it:<br />
+1. List the different functions which are encountered after `int ret = fork()` is run until `fork()` in _**proc.c**_ is called.
+2. While in the function trap in _**trap.c**_, print the trap number for `T_SYSCALL`.
+3. While in the function syscall in _**syscall.c**_, print the system call number.
+4. While in the fork function (in _**proc.c**_), after the new process is created, print the name, pid, state of the new program and that of its parent.
+
 ## 2. Adding user programs in xv6
 <!--A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).-->
 After executing <code>make qemu</code> or <code>make qemu-nox</code> you will see a prompt. The prompt is the xv6 command line interface to execute user level programs. <br /> <br /> 
