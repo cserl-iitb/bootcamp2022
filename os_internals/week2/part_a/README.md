@@ -24,12 +24,12 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
   Figure 1: GDB auto loading declined
 </p>
  
-- Run **(gdb) symbol-file _ls**.
+- Add the provided _**debug.c**_ in the _**Makefile**_ like other testcases.
+- Run **(gdb) symbol-file _debug**.
 - Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
-- In XV-6 terminal run **$ ls**.
-- You can now use the gdb commands as learnt in Week 1 assignment to debug further.
+- In XV-6 terminal run **$ debug**.
 
-Now, add the provided _**debug.c**_ in the _**Makefile**_ like other testcases and give answers to the following questions while tracing the execution of the fork system call in it:<br />
+Now, give answers to the following questions while tracing the execution of the fork system call in it:<br />
 1. List the different functions which are encountered after `int ret = fork()` is run until `fork` function in _**proc.c**_ is called.
 2. While in the function `trap` in _**trap.c**_, print the trap number for `T_SYSCALL`.
 3. While in the function `syscall` in _**syscall.c**_, print the system call number.
