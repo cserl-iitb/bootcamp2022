@@ -1,1 +1,1 @@
-Placeholder for application software track (development of a simple web server).
+Welcome to the application software track of the bootcamp. In the next few weeks, we will be developing a working web server from scratch in C/C++. Please follow the weekly exercises in this folder in order. 
