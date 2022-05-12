@@ -2,7 +2,7 @@
 Welcome to the CSERL Systems Bootcamp, Summer 2022. <br>
 CSERL: www.cse.iitb.ac.in/cserl
 
-This repository has detailed listing of weekly exercises for the bootcamp. 
+This repository has detailed listing of weekly exercises for the 6-week bootcamp. 
 
 Note that all discussions for exercises are on Piazza and Webex.
 Please lookup for instructions via email on registered email addresses.
