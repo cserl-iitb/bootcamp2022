@@ -1,11 +1,11 @@
-## OS Internals Track Week-2
+## OS Internals Track,  Week2
 
 ### Overview ###
-In this week you will learn about
+Topics of this week's exercise,
 - Process abstraction and processes in xv6
-- System calls for process management and use a couple of xv6 system calls
+- System calls for process management and using xv6 system calls
 - Adding new user programs and new system calls in xv6 
-- Debugging xv6 user code and kernel code with gdb.
+- Debugging xv6 user code and kernel code with gdb
 
 
 ### Background Material for the week:
@@ -30,6 +30,6 @@ In this week you will learn about
 
 ### Work through the material provided and then attempt the assignment: ###
 1. Assignment contains two parts [A](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week-2/part_a) and [B](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week-2/part_b).
-2. Part-B.2.b is **Optional - for those who want more challenge!**.
+2. Part-B.2.b  **Optional - but interesting and slightly challenging.**.
 
 
