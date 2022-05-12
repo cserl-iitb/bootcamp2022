@@ -8,7 +8,7 @@ Note that all discussions for exercises are on Piazza and Webex.
 Please lookup for instructions via email on registered email addresses.
 
 Weekly (online) meeting schedule is a follows:  
-1.  Monday 4pm to 5 pm.  
-2.  Thursday 4 pm to 6 pm.
+1.  Monday 5pm to 6 pm.  
+2.  Thursday 5 pm to 6 pm.
 
-For queries contact:  
+For queries contact:  cserl@iitb.ac.in
