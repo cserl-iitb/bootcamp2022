@@ -25,7 +25,7 @@ Please watch the lecture videos in the series as given:
    - [Video](https://www.youtube.com/watch?v=8V2YkO7lfvs&t=1s)
    - [Slide](https://drive.google.com/file/d/1fbBC2YfuC_qJ0YpIobAWLsGggY5nDtnf/view?usp=sharing)
 
-(Optional) Here are some practice problems if you want to work out
+**(Optional)** Here are some practice problems if you want to work out
 some problems on memory management:
 
 - [Link1](https://drive.google.com/file/d/17-Sl23RbpO8vqEa6xRzm2yV391V5qh5e/view?usp=sharing)     

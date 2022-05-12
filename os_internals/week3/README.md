@@ -1,7 +1,9 @@
 # Week-3
 
 Welcome to the task of week-3. Till now you have installed xv6 and have written some basic system calls, which may have given you an idea of how processes in an operating system works in general. Even if you don’t feel confident working with xv6 yet, don’t worry, just keep learning and practising and you will slowly start getting a hang of it. 
-Now let’s move on to the task of this week. This week you will improve upon the system calls and will implement a mechanism to communicate with or signal between two system calls.
+There is no extra reading material for this week, just follow the previous week's content. In addition to it, you can refer the OSTEP textbook chapters mentioned alongside the respective lectures on [Lectures on Operating Systems](https://www.cse.iitb.ac.in/~mythili/os/)(This is really a very good reading material, and it is strongly suggested to follow it). 
+
+Moving on to the task for this week. This week you will improve upon the system calls and will implement a mechanism to communicate with or signal between two system calls. There is an optional problem at the end which you can attempt for extra challenge. The tasks here start from easy level and the difficulty or complexity would keep on increasing as you go further. Have a good time learning and exploring!
 
 <hr>
 
@@ -31,15 +33,25 @@ Below are some hints for you to solve the problem. It is suggested to try the pr
 
 In this part of the task, you will try to communicate between two processes through the use of signals. Signals, as their name implies, used to signal something. Signals are user-level mechanisms for processes to communicate via events (signals). In this exercise we will add a feature to xv6 that enables inter-process communication through signals.
 
-You are supposed to add a new signal_process(pid, type) system call, where pid is the process id to which signal is to be sent and type is the type of the signal being sent which can be either of {PAUSE, KILL, CONTINUE}. If an user-level program calls signal_process(pid, type), then a signal is delivered to the process pid immediately and the corresponding process handles it as soon as it gets sched- uled next time. The type of the signal determines the action to be taken, i.e., PAUSE does not execute/schedule the process, KILL terminates the process, and CONTINUE release a paused processes to continue execution. Note that a paused process make no progress (is never scheduled to execute) and a process continues from where it left off after a pause.
+You are supposed to add a new `signal_process(pid, type)` system call, where _pid_ is the process id to which signal is to be sent and _type_ is the type of the signal being sent which can be either of `{PAUSE, KILL, CONTINUE}`. If an user-level program calls `signal_process(pid, type)`, then a signal is delivered to the process pid immediately and the corresponding process handles it as soon as it gets sched- uled next time. The type of the signal determines the action to be taken, i.e., the signal _PAUSE_ makes the process non-executable/non-schedulable, _CONTINUE_ releases a paused processes to continue execution, and _KILL_ terminates the process. Note that a paused process makes no progress (is never scheduled to execute) and, a process continues from where it left off after a pause.
 
-You have been given a boilerplate script(which means some part of the code already written for you) of the system call function which you have to implement. Read through the script and you will get an idea of what has to be done. The file is named as 'Week3_signal_skeleton_code.md'
+You have been given a boilerplate script(which means some part of the code already written for you) of the system call function which you have to implement. Read through the script and you will get an idea of what has to be done. The file is named as `Week3_signal_skeleton_code.md`
 
-You are also given a test program signal-test.c to check your final code. Run this at the end to check whether what changes you have made are correct or not.
+You are also given a test program `signal-test.c` to check your final code. Run this at the end to check whether the solution that you have made is correct or not.
 
 _Remember:_
 
 1. Whenever you try to write a new system call, you have to repeat all the steps of writing a new system call which you learnt last week.
 2. Do not pass arguments directly, you have to use helper functions argint, argstr.
 
+_Steps to solve:_
+1. To execute the _pause_ type, you have to define a new variable in the struct `proc`, whose value will be changed when the argument _PAUSE_ is passed. This variable will be checked everytime by the scheduler, if it is found that the variable is changed, the scheduler will not run that process.
+2. Remember, you have to change the value to some default when the arguments _CONTINUE_ and _KILL_ are passed.
+
+## 4. How much time should the process be paused?(optional)
+
+So for those of you who have finished all the previous tasks, this is for you. This is a continuation of the previous part(signalling). The aim here is to define a new system call `pause(pid, duration)`, which would pause the process with the given PID as argument for the given duration of time. The unit of duration here will be 'ticks'. Tick is the unit of time that after which a timer interrupts the CPU, periodically. Don't worry about this much. You will need to use the system call `uptime`. Refer to it and see what does it do. There is no skeleton code provided for this part. The test code for this task is named `timed_pause.c`.
+
+_Hint:_
+Note what does `uptime` do. You may need to take the difference of the _ticks_ values and compare it with the duration passed in the `pause` system call.
 
