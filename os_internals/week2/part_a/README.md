@@ -25,7 +25,7 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
 </p>
  
 - Add the provided _**debug.c**_ in the _**Makefile**_ like other testcases.
-- Run **(gdb) symbol-file _debug**.
+- Run **(gdb) file _debug**.
 - Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
 - In XV-6 terminal run **$ debug**.
 
