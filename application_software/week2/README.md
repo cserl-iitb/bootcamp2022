@@ -2,7 +2,7 @@
 
 This week, we will build a simple echo client-server application, with multi-threading at the server. Please work thorugh the following tasks in order.
 
-## Exercise 1: Understanding socket programming
+## Exercise 1: Single-threaded echo client and server
 
 Your first task is to write simple C/C++ client-server programs using the socket API. In this exercise, the client should send a message to the server, and the server should simply echo it back to the client. That is, the server must send the same message back to the client. The server should keep doing this as long as the client is connected to it. It is enough if your programs work for a single client connected to a server for now.
 
