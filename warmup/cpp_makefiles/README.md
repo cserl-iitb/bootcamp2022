@@ -41,4 +41,4 @@ If you are familiar with compilation and execution of c/cpp programs via termina
     Result: 6 19
     ```
     
-3. Consider the files in directory ``make_exercise`` in this assignment folder. Create a Makefile which will create a binary ``main`` (use ``gcc`` compiler) (compiling ``main.cpp``, ``hello.cpp``, ``factorial.cpp`` and ``functions.h``). Note that, you must use makefile variables like compiler (``CC``), flags (``CFLAGS``), dependencies (``DEPS``) in your makefile. 
+3. Consider the files in directory ``make_exercise`` in this assignment folder. Create a Makefile which will create a binary ``main`` (use ``gcc`` compiler) (using the files ``main.cpp``, ``hello.cpp``, ``factorial.cpp`` and ``functions.h``). Note that, you must use makefile variables like compiler (``CC``), flags (``CFLAGS``), dependencies (``DEPS``) in your makefile. 
