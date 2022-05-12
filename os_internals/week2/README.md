@@ -29,9 +29,9 @@ Topics of this week's exercise,
 2. We have modied some xv6 files for this lab, and these patched files are provided as part of this lab's code. Before you begin the lab, copy the patched files into the main xv6 code directory. -->
 
 ### Work through the material provided and then attempt the assignment: ###
-1. Assignment contains two parts---
-- [Part A](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week-2/part_a) and 
-- [Part B](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week-2/part_b)
+1. Assignment contains two parts-
+- [Part A](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week2/part_a)
+- [Part B](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week2/part_b)
 2. Part-B.2.b  **Optional - but interesting and slightly challenging.**.
 
 
