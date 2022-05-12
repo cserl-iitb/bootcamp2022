@@ -58,7 +58,7 @@ $ ./my_siblings 6 1 2 1 0 2 0
 Implement a system call <code>get_ancestors()</code>, which takes a positive number n and a pointer to an integer array as arguments.<br />
 <code>get_ancestors(n, array)</code><br /><br />
 This system call writes the process IDs of n parents of the calling process to the given array. Parent of calling process is at level 1. You can assume that the size of array is sufficient enough to hold the required details. If the number of ancestors is less than n, then the system call should collect PIDs till init process and return 0, otherwise, the system call should return 1.<br /><br />
-To pass parameters to system call, understand how it is done for other system calls. You will have to use <code>argint</code> and <code>argptr</code> in _**syscall.c**_ that we learnt in 1(b) of Part B.<br /><br />
+To pass parameters to system call, understand how it is done for other system calls. You will have to use <code>argint</code> and <code>argptr</code> in _**syscall.c**_ that we learnt in [question 2 of Hello Xv6 World](https://github.com/cserl-iitb/bootcamp2022/edit/main/os_internals/week-2/part_b/README.md).<br /><br />
 _**Note:**_ Make sure you handle the case when n is less than number of ancestors and you reach the init process.<br /><br />
 You are also given a sample user-level program **my_ancestors.c** which takes two numbers as command line arguments and uses the system call. The first argument is depth of forking and the second is the parameter n passed to the system call. Add this as a user level program to xv6 and test your implementation.<br /><br />
 **Sample runs:**
