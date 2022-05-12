@@ -30,8 +30,8 @@ Topics of this week's exercise,
 
 ### Work through the material provided and then attempt the assignment: ###
 1. Assignment contains two parts-
-- [Part A](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week2/part_a)
-- [Part B](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week2/part_b)
+    - [Part A](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week2/part_a)
+    - [Part B](https://github.com/cserl-iitb/bootcamp2022/tree/main/os_internals/week2/part_b)
 2. Part-B.2.b  **Optional - but interesting and slightly challenging.**.
 
 
