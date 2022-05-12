@@ -72,7 +72,7 @@ When you create a thread to handle a client request at your server, you must pas
         //...more code...
 
     }
-
+```
 
 Change your server from exercise 1 to handle the accepted client in a separate thread as described above. First, write code to create one thread to handle one client. Then extend this code to handle a small number of clients (say 5 or 10) in separate threads. That is, your server creates multiple threads, and gives each accepted client to a separate thread. Each created thread will focus on communicating with the client given to it as an argument at creation time, while the main server thread can go back to accepting new connections. In this way, your server can perform the echo service with multiple clients at the same time. 
 
