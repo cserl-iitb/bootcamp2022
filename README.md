@@ -11,4 +11,4 @@ Weekly (online) meeting schedule is a follows:
 1.  Monday 5pm to 6 pm.  
 2.  Thursday 5 pm to 6 pm.
 
-For queries contact:  cserl@iitb.ac.in
+For queries related to registration contact:  cserl@iitb.ac.in
