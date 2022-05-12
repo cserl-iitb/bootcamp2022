@@ -28,9 +28,9 @@ You must now integrate this HTTP parsing into your simple echo server built in t
 For your server code to compile correctly, you will need to include ```http_server.h``` in the server file, so that the HTTP related functions and data structures are accessible. You also need to compile the server with the ```http_server.cpp``` to generate your final executable. You can use a Makefile to compile your server correctly.
 
 ## Testing your HTTP server
- Open your favourite web browser (e.g., Mozilla Firefox), and type http://localhost:8080/\<filename\> (with a suitable port number and filename as per your implementation) in the address bar to request for the particular file from the server. If your HTTP server works properly, then you should be able to see a corresponding webpage (if the requested URL exists) or a 404 message (if the requested URL doesn’t exist).
+ Open your favourite web browser (e.g., Mozilla Firefox), and type http://localhost:8080/<filename\> (with a suitable port number and filename as per your implementation) in the address bar to request for the particular file from the server. If your HTTP server works properly, then you should be able to see a corresponding webpage (if the requested URL exists) or a 404 message (if the requested URL doesn’t exist).
 
-You can also test your server using the wget command-line tool which is used to download files from the web. If you use the command  wget http://localhost:8080/\<filename\> -O <output_file>, then the file at the requested url should be downloaded and saved in the output_file. Test your server thoroughly before proceeding to the next exercise.
+You can also test your server using the wget command-line tool which is used to download files from the web. If you use the command  wget http://localhost:8080/<filename\> -O <output_file>, then the file at the requested url should be downloaded and saved in the output_file. Test your server thoroughly before proceeding to the next exercise.
 
 ## Submission
 
