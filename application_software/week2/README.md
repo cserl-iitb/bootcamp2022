@@ -28,7 +28,9 @@ Here is the output from these simple programs given to you  (the client and serv
     I got your message
 ```
 
-Please understand these sample programs and all the socket-related system calls completely. Then, use this code as a template to write your own echo client and server in C or C++. Unlike this sample server, your server must echo back exactly the message received from the client. Also, it must repeatedly read data from the client and echo it back, and not just quit after one message exchange. Complete writing this simple echo client and server, and test it thoroughly, before you proceed to the next exercise.
+Please understand these sample programs and all the socket-related system calls completely. Also note the use of functions like ```htons``` to convert from host order to network order when communicating data over the network. Once you understand these examples, use this code as a template to write your own echo client and server in C or C++. Unlike this sample server, your server must echo back exactly the message received from the client. Also, it must repeatedly read data from the client and echo it back, and not just quit after one message exchange. 
+
+Complete writing this simple echo client and server, and test it thoroughly, before you proceed to the next exercise.
 
 **Other additional references to understand socket programming:** 
 
@@ -86,9 +88,9 @@ Begin by watching this video to understand the multi-threaded design pattern of 
 
 More video lectures on [Locking](https://youtu.be/EBevKfTDXUI) and [Condition Variables](https://youtu.be/rMpOfbaP2PQ)
 
-To design a thread pool, you must first create multiple threads. Next, you will need a shared buffer or queue to place the accepted clients in. You can use a large array or a C++  [queue](https://www.cplusplus.com/reference/queue/queue/) or any such data structure for this purpose. The main server thread and the worker threads must use locks to access this buffer without race conditions. Next, the main server thread and worker threads will use condition variables to signal each other when clients are added or removed from the queue. Carefully study the various functions available to correctly use locks and condition variables from this [introduction to Pthread API](https://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf)
+To design a thread pool, you must first create multiple threads. Next, you will need a shared buffer or queue to store the accepted client file descriptors. You can use a large array or a C++  [queue](https://www.cplusplus.com/reference/queue/queue/) or any such data structure for this purpose. The main server thread and the worker threads must use locks to access this queue without race conditions. Next, the main server thread and worker threads will use condition variables to signal each other when clients are added or removed from the queue. Carefully study the various functions available to correctly use locks and condition variables from this [introduction to Pthread API](https://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf)
 
-After you make these changes, your server will be able to handle multiple clients concurrently as before. Start your server in one terminal. Open separate terminals to start several different clients, and check that all of them can correctly communicate with the echo server. You can also print out some debug output to check that clients are correctly being assigned to worker threads, and that the worker thread is serving another client after the first client terminates.
+After you make these changes, your server will be able to handle multiple clients concurrently as before, but without having to create a new thread for every client. Start your server in one terminal. Open separate terminals to start several different clients, and check that all of them can correctly communicate with the echo server. You can also print out some debug output to check that clients are correctly being assigned to worker threads, and that the worker thread is serving another client after the first client terminates.
 
 # Submission
 Push your echo client and multi-threaded echo server client developed this week into your GitHub repository for the bootcamp.

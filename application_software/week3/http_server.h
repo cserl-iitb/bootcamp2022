@@ -23,7 +23,8 @@ struct HTTP_Response
 
     string status_code;  //ex: 200, 404, etc.
     string status_text;  //ex: OK, Not Found, etc.
-    
+   
+    string date; //current date to return
     string content_type;
     string content_length;
 

@@ -44,7 +44,7 @@ HTTP_Response* handle_request(string req)
 
     HTTP_Response *response = new HTTP_Response();
 
-    string url = string("nested_html/") + request->url;
+    string url = string("html_files/") + request->url;
 
     response->HTTP_version = "1.0";
 
