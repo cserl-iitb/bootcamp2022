@@ -5,7 +5,7 @@ This week, we will build a simple echo client-server application. The client and
 
 # Exercise 1: Understanding socket programming
 
-Your first task is to write a simple C++ client-server programs using the socket API. In this exercise, the client should send a message to the server, and the server should simply echo it back to the client. The server should keep doing this as long as the client is connected to it. 
+Your first task is to write a simple C/C++ client-server programs using the socket API. In this exercise, the client should send a message to the server, and the server should simply echo it back to the client. That is, it must send the same message back to the client. The server should keep doing this as long as the client is connected to it. 
 
 Below are two video lectures to understand the concepts involved (you can watch either one):
 
@@ -13,7 +13,7 @@ Below are two video lectures to understand the concepts involved (you can watch 
 
 [Network I/O using sockets video lecture 2](https://youtu.be/UIH-cqUjcM0)
 
-Here are links to sample [client](https://www.cse.iitb.ac.in/~mythili/os/labs/lab-kvserver/simple-client.c) and [server](https://www.cse.iitb.ac.in/~mythili/os/labs/lab-kvserver/simple-server.c) socket programs. You can compile and run these simple programs, and use them as a guide to write your own code. The server program takes one command line argument: the port number on which to listen. The client program takes two arguments: the server hostname and port number. You can give localhost as the hostname if you are running the client and server on the same machine. Once the client and server are connected to each other, the client sends a message to the server and gets a reply back. 
+Now, consider the simple client and server programs provided to you in this repository. You can use them as a guide to write your own code. The server program takes one command line argument: the port number on which to listen. The client program takes two arguments: the server hostname and port number. You can give localhost as the hostname if you are running the client and server on the same machine. Once the client and server are connected to each other, the client sends a message to the server and gets a reply back. 
 
 Here is the output from these sample programs
 
@@ -29,10 +29,9 @@ Here is the output from these sample programs
     I got your message
 ```
 
+Please understand these sample programs and all the socket-related system calls completely. Then, use this code as a template to write your own echo client and server in C or C++. Unlike this sample server, your server must echo back exactly the message received from the client. Also, it must repeatedly read data from the client and echo is back, and not just quit after one message exchange. Complete writing this simple echo client and server before you proceed to the next exercise.
 
-Please understand these sample programs and all the socket-related system calls completely. Then, use this code as a template to write your own echo client and server in C or C++. 
-
-**Other additional references:** 
+**Other additional references to understand socket programming:** 
 
 [Beej’s Guide to Network Programming](https://beej.us/guide/bgnet/html/) 
 
