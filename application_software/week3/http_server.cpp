@@ -94,5 +94,6 @@ string HTTP_Response::get_string()
 {
     /*
     TODO : implement this function
+    You can use sprintf to print to a string
     */
 }
