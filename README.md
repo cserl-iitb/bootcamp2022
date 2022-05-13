@@ -6,8 +6,6 @@ This repository has detailed listing of weekly exercises for the 6-week bootcamp
 
 Note that all discussions for exercises are on Piazza and Webex. Please lookup for instructions via email on registered email addresses.
 
-Weekly (online) meeting schedule is a follows:  
-1.  Monday 5 pm to 6 pm.  
-2.  Thursday 5 pm to 6 pm.
+Weekly (online) meetings are scheduled Mondays and Thursdays 5:30pm to 6:30pm for live interaction.
 
 For queries related to registration contact:  cserl@iitb.ac.in

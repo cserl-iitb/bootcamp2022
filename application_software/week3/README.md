@@ -17,6 +17,8 @@ Your HTTP web server must parse the data received from the client and construct 
 4. It is not required for the server to parse any of the headers in the HTTP request. For a first implementation, you can also skip returning any of the HTTP headers in the response file, and only return the status of the response followed by the actual HTML content. Once this basic version works, you should try to support the HTTP headers of Date, Content-Type, and 
 Content-Length in the HTTP response.  Note that there is a end-of-line sequence (\r\n) present after every header line, and an extra end of line present after the headers and before the start of the body. There is no need for an end-of-line sequence after the message body. To fill the headers, you may use the ```stat``` function in the C library to get information about a file like its size. You can use functions like ```time``` to get the current time. It is also fine to return dummy values in these headers for an initial implementation. 
 
+If you complete building your server with these simple specifications, you can proceed to support more HTTP functionality as well, e.g., parse more headers, or add support for more content types.
+
 ## Skeleton code
 
 Recall that the HTTP server must read data from the socket, parse the received data to form a HTTP request structure from it, generate a suitable HTTP response structure, convert this response back into a string, and write it into the socket. We have provided some skeleton code for you to get started with the server processing. 
@@ -31,6 +33,8 @@ For your server code to compile correctly, you will need to include ```http_serv
  Open your favourite web browser (e.g., Mozilla Firefox), and type http://localhost:8080/<filename\> (with a suitable port number and filename as per your implementation) in the address bar to request for the particular file from the server. If your HTTP server works properly, then you should be able to see a corresponding webpage (if the requested URL exists) or a 404 message (if the requested URL doesn’t exist).
 
 You can also test your server using the wget command-line tool which is used to download files from the web. If you use the command  wget http://localhost:8080/<filename\> -O <output_file>, then the file at the requested url should be downloaded and saved in the output_file. Test your server thoroughly before proceeding to the next exercise.
+
+Once your basic server is in place, you can progressively add more functionality and test with more types of content as well.
 
 ## Submission
 
