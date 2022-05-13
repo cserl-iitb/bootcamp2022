@@ -17,7 +17,7 @@ Again, the problem statement has been designed to encourage learning. Do not hes
 
 - Make sure you have the [source code](http://www.cse.iitb.ac.in/~puru/courses/autumn18/labs/xv6-public.tar.gz) for xv6, and that you know how to compile and run it
 - You would be creating new system calls for this task, so make sure you understand the steps involved in doing so. (You have learnt this in Weeks 2 and 3)
-- This lab’s code is present in `test-code` folder, and contains the following files: `Makefile`, `syscall.c`, `syscall.h`, `sysproc.c`, `test.c`, `user.h` and `usys.s`. These files add new system calls for the second part of the lad, and implements a new global counter that needs to be synchronized. 
+- This lab’s code is present in `test-code` folder, and contains the following files: `Makefile`, `syscall.c`, `syscall.h`, `sysproc.c`, `test.c`, `user.h` and `usys.s`. These files add new system calls for the second part of the lab, and implements a new global counter that needs to be synchronized. 
 
 
 
