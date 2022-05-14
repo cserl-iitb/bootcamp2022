@@ -1,13 +1,18 @@
-# Bootcamp Week 5: Load testing
-
-This week's work is split into two sections
-
-1. [Memory Leaks using Valgrind](./valgrind/README.md)
-2. [Performance Measures using curl](./performance/README.md)
-
 # Bootcamp Week 5: Performance testing
 
-This week, we will perform a load test of your HTTP server to measure its capacity. Before you begin, please review the lectures pertaining to performance testing (31-33) from [Design and Engineering of Computer Systems](https://www.cse.iitb.ac.in/~mythili/decs/). 
+This week, we will perform a load test of your HTTP server to measure its capacity. Before you begin, please review the lectures pertaining to performance testing (31-33) from [Design and Engineering of Computer Systems](https://www.cse.iitb.ac.in/~mythili/decs/).
+
+## Checking for Memory leaks
+
+Memory leak occurs when programmers create a memory in heap and forget to delete it.
+
+The consequences of memory leak is that it reduces the performance of the computer by reducing the amount of available memory. Eventually, in the worst case, too much of the available memory may become allocated and all or part of the system or device stops working correctly, the application fails, or the system slows down vastly.
+
+Memory leaks are particularly serious issues for programs like servers which by definition never terminate.
+
+Since performance testing requires load testing, a server with memory leak(s) would likely run out of memory.
+
+Valgrind is a tool used to check for memory leaks. Refer to the [Memory Leaks using Valgrind](./valgrind/README.md) to remove memory leaks from servers written by you in last three weeks.
 
 ## Closed-loop load generator client
 
