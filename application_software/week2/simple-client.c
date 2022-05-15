@@ -1,73 +1,75 @@
 #include <stdio.h>
-#include <sys/types.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
 #include <sys/socket.h>
+#include <sys/types.h>
+
+#include <netdb.h>
 #include <netinet/in.h>
-#include <netdb.h> 
 
-void error(char *msg)
-{
-    perror(msg);
+void error(char *msg) {
+  perror(msg);
+  exit(0);
+}
+
+int main(int argc, char *argv[]) {
+  int sockfd, portno, n;
+
+  struct sockaddr_in serv_addr;
+  struct hostent *server;
+
+  char buffer[256];
+  if (argc < 3) {
+    fprintf(stderr, "usage %s hostname port\n", argv[0]);
     exit(0);
-} 
+  }
 
-int main(int argc, char *argv[])
-{
-    int sockfd, portno, n;
+  /* create socket, get sockfd handle */
 
-    struct sockaddr_in serv_addr;
-    struct hostent *server;
+  portno = atoi(argv[2]);
+  sockfd = socket(AF_INET, SOCK_STREAM, 0);
+  if (sockfd < 0)
+    error("ERROR opening socket");
 
-    char buffer[256];
-    if (argc < 3) {
-       fprintf(stderr,"usage %s hostname port\n", argv[0]);
-       exit(0);
-    }
+  /* fill in server address in sockaddr_in datastructure */
 
-    /* create socket, get sockfd handle */
+  server = gethostbyname(argv[1]);
+  if (server == NULL) {
+    fprintf(stderr, "ERROR, no such host\n");
+    exit(0);
+  }
+  bzero((char *)&serv_addr, sizeof(serv_addr));
+  serv_addr.sin_family = AF_INET;
+  bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr,
+        server->h_length);
+  serv_addr.sin_port = htons(portno);
 
-    portno = atoi(argv[2]);
-    sockfd = socket(AF_INET, SOCK_STREAM, 0);
-    if (sockfd < 0) 
-        error("ERROR opening socket");
+  /* connect to server */
 
-    /* fill in server address in sockaddr_in datastructure */
+  if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
+    error("ERROR connecting");
 
-    server = gethostbyname(argv[1]);
-    if (server == NULL) {
-        fprintf(stderr,"ERROR, no such host\n");
-        exit(0);
-    }
-    bzero((char *) &serv_addr, sizeof(serv_addr));
-    serv_addr.sin_family = AF_INET;
-    bcopy((char *)server->h_addr, 
-         (char *)&serv_addr.sin_addr.s_addr,
-         server->h_length);
-    serv_addr.sin_port = htons(portno);
+  /* ask user for input */
 
-    /* connect to server */
+  printf("Please enter the message: ");
+  bzero(buffer, 256);
+  fgets(buffer, 255, stdin);
 
-    if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0) 
-        error("ERROR connecting");
+  /* send user message to server */
 
-    /* ask user for input */
+  n = write(sockfd, buffer, strlen(buffer));
+  if (n < 0)
+    error("ERROR writing to socket");
+  bzero(buffer, 256);
 
-    printf("Please enter the message: ");
-    bzero(buffer,256);
-    fgets(buffer,255,stdin);
+  /* read reply from server */
 
-    /* send user message to server */
+  n = read(sockfd, buffer, 255);
+  if (n < 0)
+    error("ERROR reading from socket");
+  printf("%s\n", buffer);
 
-    n = write(sockfd,buffer,strlen(buffer));
-    if (n < 0) 
-         error("ERROR writing to socket");
-    bzero(buffer,256);
-
-    /* read reply from server */
-
-    n = read(sockfd,buffer,255);
-    if (n < 0) 
-         error("ERROR reading from socket");
-    printf("%s\n",buffer);
-
-    return 0;
+  return 0;
 }
