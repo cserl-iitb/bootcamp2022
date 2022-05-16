@@ -58,7 +58,7 @@ Note: There are plenty of resources available online for more detailed reading. 
 
     B.
 
-    - Create a new private repository named **\<Bootcamp_2022_my_submission\>** from your account. 
+    - Create a new private repository named **\<Bootcamp_2022_my_submission\>** (or any other similar name) from your account. 
 
     - Clone it on your local machine (use git clone \<url\> command).
   
