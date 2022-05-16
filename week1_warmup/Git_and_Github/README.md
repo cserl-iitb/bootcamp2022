@@ -50,7 +50,27 @@ Note: There are plenty of resources available online for more detailed reading. 
 
 ### Exercises
 
-1. **Do you want to fix a bug?**
+1. **Repository Creation**
+
+    A. 
+    
+    - Clone [bootcamp2022](https://github.com/cserl-iitb/bootcamp2022) repo(use `git clone https://github.com/cserl-iitb/bootcamp2022.git` command).
+
+    B.
+
+    - Create a new private repository named **\<Bootcamp_2022_my_submission\>** from your account. 
+
+    - Clone it on your local machine (use git clone \<url\> command).
+  
+    - Make a new folder named \<Week1_solutions\> inside it. 
+
+    - copy files from **bootcamp2022/week1_warmup** directory to the \<Week1_solutions\> directory.
+
+    - Do add, commit and push on your repository.
+    
+    - Push your solutions onto your repo periodically.
+
+2. **Do you want to fix a bug?**
 
     - Fork [this](https://github.com/rajagond/git_assignment) repository. This will create a copy of repository on your account. <br>
 
@@ -103,12 +123,4 @@ Note: There are plenty of resources available online for more detailed reading. 
         
     - Create a new tag <code>final_submission</code> and push it on your repository.
 
-2. **Repository Creation**
 
-    - Create a new private repository named **\<Bootcamp_2022_my_submission\>** from your account. 
-
-    - Clone it on your local machine (use git clone \<url\> command).
-  
-    - Make a new folder named \<Week_1\> inside it. 
-
-    - Push your solutions onto your own repo.
