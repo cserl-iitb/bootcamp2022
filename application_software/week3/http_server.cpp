@@ -42,7 +42,7 @@ HTTP_Response *handle_request(string req) {
 
   HTTP_Response *response = new HTTP_Response();
 
-  string url = string("html_files/") + request->url;
+  string url = string("html_files") + request->url;
 
   response->HTTP_version = "1.0";
 
@@ -89,4 +89,6 @@ string HTTP_Response::get_string() {
   /*
   TODO : implement this function
   */
+
+ return "";
 }
