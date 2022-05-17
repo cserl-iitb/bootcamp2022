@@ -5,11 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include <sys/socket.h>
-#include <sys/types.h>
-
 #include <netdb.h>
-#include <netinet/in.h>
 
 void error(char *msg) {
   perror(msg);
@@ -71,7 +67,7 @@ int main(int argc, char *argv[]) {
   n = read(sockfd, buffer, 255);
   if (n < 0)
     error("ERROR reading from socket");
-  printf("%s\n", buffer);
+  printf("Server response: %s\n", buffer);
 
   return 0;
 }
