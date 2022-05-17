@@ -1,3 +1,5 @@
+/* run client using: ./client localhost <server_port> */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
