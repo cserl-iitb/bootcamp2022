@@ -8,7 +8,7 @@ In this part we will learn how to
 ## 1. Debugging user programs on xv6 with gdb
 **Note**: For this question, in the Makefile, replace the line where `CFLAGS` is first defined with:
 ```
-CFLAGS = -fno-pic -static -fno-builtin -fno-strict-aliasing -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -gdwarf-2 -fno-inline-small-functions -O0
+CFLAGS = -fno-pic -static -fno-builtin -fno-strict-aliasing -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -gdwarf-2 -fno-inline-small-functions -Og
 ```
 and change number of CPUs to 1 (replacing `CPUS := 2` with `CPUS := 1`).
 
@@ -35,6 +35,7 @@ Now, give answers to the following questions while tracing the execution of the 
 2. While in the function `trap` in _**trap.c**_, print the trap number for `T_SYSCALL`.
 3. While in the function `syscall` in _**syscall.c**_, print the system call number.
 4. While in the `fork` function (in _**proc.c**_), after the new process is created, print the name, pid, state of the new program and that of its parent.
+Note: If we step into a function which we want to execute till it's end, we can the <code>finish</code> command.
 
 ## 2. Adding user programs in xv6
 <!--A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).-->
