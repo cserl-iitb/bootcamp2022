@@ -43,4 +43,4 @@ If you are familiar with compilation and execution of c/cpp programs via termina
     
 3. Consider the files in directory ``make_exercise`` in this assignment folder. 
 - Using the files main.cpp, hello.cpp and factiorial.cpp create a single binary ``main``. Execute the program and check for correctness.
-- Create a Makefile which will create a binary ``main`` (use ``gcc`` compiler) (using the files ``main.cpp``, ``hello.cpp``, ``factorial.cpp`` and ``functions.h``). Note that, you must use makefile variables like compiler (``CC``), flags (``CFLAGS``), dependencies (``DEPS``) in your makefile. 
+- Create a Makefile which will create a binary ``main`` (use ``g++`` compiler) (using the files ``main.cpp``, ``hello.cpp``, ``factorial.cpp`` and ``functions.h``). Note that, you must use makefile variables like compiler (``CC``), flags (``CFLAGS``), dependencies (``DEPS``) in your makefile. 
