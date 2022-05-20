@@ -1,0 +1,24 @@
+1.	Command to show hidden files $ ls -a
+
+variant of cp is rsync 
+$ rsync –a my_file.txt /new_directory/my_file_backup.txt
+
+to change rename a file name the command used is $ mv <original filename.type> <new filename.type>
+
+
+2.	The processor is the electronic chip located in the computer which comprises commands to make logic, and arithmetic control and output or input variation whereas the core is the executing unit placed in the processor which receives and follows the instruction.
+It is an electronic component placed inside the processor. It works on the simple instructions fed to it and it simply follows that step by step to execute and complete successfully.
+CPU CORES=4
+PROCESSORS=4
+CPU SOCKETS=1
+FREQUENCY OF EACH PROCESSOR=2418.741
+TOTAL MEMORY=6405600 KB
+MEMORY FREE=4444704 KB
+MEMORY USED=5364268 KB
+DIFFERENCE=919564 KB
+Forks SINCE LAST BOOT=5698
+User level process= 116
+
+3.	The process is in zombie state.
+1447.1 kb memory used
+PID=8542
