@@ -36,7 +36,7 @@ Now, give answers to the following questions while tracing the execution of the 
 3. While in the function `syscall` in _**syscall.c**_, print the system call number.
 4. While in the `fork` function (in _**proc.c**_), after the new process is created, print the name, pid, state of the new program and that of its parent.
 
-Note: If we step into a function which we want to execute till it's end, we can the <code>finish</code> command.
+Note: If we step into a function which we want to execute till it's end, we can use the <code>finish</code> command.
 
 ## 2. Adding user programs in xv6
 <!--A simple example is given [here](https://www.geeksforgeeks.org/xv6-operating-system-add-a-user-program/).-->
