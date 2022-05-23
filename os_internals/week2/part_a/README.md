@@ -26,7 +26,7 @@ Look at `Remote Debugging xv6 under QEMU' section of [this page](https://web.arc
   Figure 1: GDB auto loading declined
 </p>
  
-- Run **(gdb) file _debug**.
+- Run **(gdb) symbol-file _debug**.
 - Place a breakpoint **(gdb) break main** and continue with **(gdb) continue.**
 - In XV-6 terminal run **$ debug**.
 
