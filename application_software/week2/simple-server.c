@@ -27,11 +27,10 @@ int main(int argc, char *argv[])
 
      /* create socket */
 
-    printf("1");
      sockfd = socket(AF_INET, SOCK_STREAM, 0);
      if (sockfd < 0) 
         error("ERROR opening socket");
-    printf("2");
+
      /* fill in port number to listen on. IP address can be anything (INADDR_ANY) */
 
      bzero((char *) &serv_addr, sizeof(serv_addr));
