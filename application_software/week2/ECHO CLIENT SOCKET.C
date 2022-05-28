@@ -32,6 +32,7 @@ int main(int argc, char const *argv[]) {
     exit(2);
   }
 
+  
   if (write(serverFd, buffer, strlen(buffer)) < 0) {
     perror("Cannot write");
     exit(3);
