@@ -19,11 +19,11 @@ We will be using the <code>struct ptable</code> in the remaining exercises. When
 For now just make sure that if you need to use the <code>ptable</code> you follow the pattern :<br />
 ```
 ...
-acquire(&ptable . lock );
-// Make use of the ptable structure<br />
+acquire(&ptable.lock );
+// Make use of the ptable structure
 ...
 ...
-release(&ptable . lock ); // DO NOT FORGET THIS !!
+release(&ptable.lock ); // DO NOT FORGET THIS !!
 ...
 ```
 ### 1. **got siblings?**  
