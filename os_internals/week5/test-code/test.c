@@ -11,6 +11,13 @@ int main(void)
        Modify this to ensure race conditions do not mess up final value
        Without locking, the output would be a random value less than 20000
     */
+
+    /*  
+        Tescases:
+            1. Print lock id if the lock has been initialized.
+            2. define and call the function 'int holding_mylock(int id)' to check the status of
+               the lock in two scenarios - i) when the lock is held and ii) when the lock is not held. 
+    */
     for(int i=0; i<10000; i++){
         set_cnt(display_count()+1);
     }
