@@ -1,0 +1,11 @@
+$ ancestor
+
+child: pid 4
+child: parent pid 3
+
+parent: pid 3
+parent: parent pid 2 
+parent: child pid 4
+
+child: pid 4
+child: parent pid 2
