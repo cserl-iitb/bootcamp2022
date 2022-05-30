@@ -1,0 +1,14 @@
+$ timed-pause
+
+parent 5: Creating first child 
+
+child 6: starts executiion at 499 
+child 6: ends at 510 
+child 6: time taken = 11 ticks 
+
+parent 5: Creating second child 
+
+child 7: starts executiion at 511 
+child 7: ends at 1023 
+child 7: time taken = 512 ticks 
+$ 
