@@ -107,3 +107,37 @@ void sys_set_cnt(void){
 int sys_display_count(void){
   return counter;
 }
+
+/* New system calls for the global counter 1
+*/
+int counter_1;
+
+void sys_init_counter_1(void){
+  counter_1 = 0;
+}
+
+void sys_set_cnt_1(void){
+  int val; argint(0, &val);
+  counter_1 = val;
+}
+
+int sys_display_count_1(void){
+  return counter_1;
+}
+
+/* New system calls for the global counter 2
+*/
+int counter_2;
+
+void sys_init_counter_2(void){
+  counter_2 = 0;
+}
+
+void sys_set_cnt_2(void){
+  int val; argint(0, &val);
+  counter_2 = val;
+}
+
+int sys_display_count_2(void){
+  return counter_2;
+}

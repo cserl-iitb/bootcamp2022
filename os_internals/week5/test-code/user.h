@@ -26,6 +26,12 @@ int uptime(void);
 void init_counter(void);
 void set_cnt(int);
 int  display_count(void);
+void init_counter_1(void);
+void set_cnt_1(int);
+int  display_count_1(void);
+void init_counter_2(void);
+void set_cnt_2(int);
+int  display_count_2(void);
 
 // ulib.c
 int stat(char*, struct stat*);

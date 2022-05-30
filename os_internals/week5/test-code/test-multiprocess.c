@@ -4,12 +4,12 @@
 
 int main(void) 
 {
-    init_counter();
+    init_counter_1();
     int ret1 = fork(); // creates child process 1
 
-    /* This is where we spawn multiple processes to increment the global counter
-       Modify this to ensure race conditions do not mess up final value
-       Without locking, the output would be a random value less than 30000
+    /* This is where we spawn multiple processes to increment different global counters.
+       Modify this to ensure race conditions do not mess up final value.
+       Without locking, the output value of counter_1 and counter_2 would be a random value less than 20000.
     */
 
     /*  
@@ -17,35 +17,37 @@ int main(void)
             1. Print lock id if the lock has been initialized.
             2. define and call the function 'int holding_mylock(int id)' to check the status of
                the lock in two scenarios - i) when the lock is held and ii) when the lock is not held. 
-            3. You have to implement locking in all the processes so that the final value of counter comes
-               to be 30000.
+            3. You have to implement locking in all the processes so that the output value of both counter variables comes
+               to be 20000.
     */
 
     // Hint: Implement one locking system here
     
     for(int i=0; i<10000; i++){
-        set_cnt(display_count()+1);
+        set_cnt_1(display_count()+1);
     }
 
     if(ret1 == 0){
         // Hint: Implement one locking system here
 
+        init_counter_2();
         int ret2 = fork(); //creates child process 2
 
-        for(int i=0; i<10000; i++){
-            set_cnt(display_count()+1);
+        for(int j=0; j<10000; j++){
+            set_cnt_2(display_count_2()+1);
         }
 
         if(ret2==0)
             exit();
         else{
             wait();
+            printf(1, "counter_2: %d\n", display_count_2());
             exit();
         }
     }
     else{
         wait();
-        printf(1, "%d\n", display_count());
+        printf(1, "counter_1: %d\n", display_count_1());
         exit();
     }
 
