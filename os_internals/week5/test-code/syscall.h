@@ -22,12 +22,12 @@
 #define SYS_close  21
 
 // Assignment system calls for the global counter
-#define SYS_init_counter 22
-#define SYS_set_cnt 23
-#define SYS_display_count 24
-#define SYS_init_counter_1 25
-#define SYS_set_cnt_1 26
+#define SYS_init_counter    22
+#define SYS_update_cnt      23
+#define SYS_display_count   24
+#define SYS_init_counter_1  25
+#define SYS_update_cnt_1    26
 #define SYS_display_count_1 27
-#define SYS_init_counter_2 28
-#define SYS_set_cnt_2 29
+#define SYS_init_counter_2  28
+#define SYS_update_cnt_2    29
 #define SYS_display_count_2 30

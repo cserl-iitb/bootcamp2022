@@ -18,8 +18,9 @@ int main(void)
             2. define and call the function 'int holding_mylock(int id)' to check the status of
                the lock in two scenarios - i) when the lock is held and ii) when the lock is not held. 
     */
+
     for(int i=0; i<10000; i++){
-        set_cnt(display_count()+1);
+        update_cnt();
     }
 
     if(ret == 0)

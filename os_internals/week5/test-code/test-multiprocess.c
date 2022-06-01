@@ -24,7 +24,7 @@ int main(void)
     // Hint: Implement one locking system here
     
     for(int i=0; i<10000; i++){
-        set_cnt_1(display_count()+1);
+        update_cnt_1(display_count()+1);
     }
 
     if(ret1 == 0){
@@ -34,7 +34,7 @@ int main(void)
         int ret2 = fork(); //creates child process 2
 
         for(int j=0; j<10000; j++){
-            set_cnt_2(display_count_2()+1);
+            update_cnt_2(display_count_2()+1);
         }
 
         if(ret2==0)
