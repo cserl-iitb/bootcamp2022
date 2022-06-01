@@ -60,7 +60,7 @@ You are allowed to use the atomic `xchg()` function in your implementation of th
 
   Check the status of the custom spinlock denoted by identifier `id`. Return 0 if the lock is not currently held by any process, 1 if the lock is held by some process and -1 in other cases. (Such as checking the status of a lock that was not initialized)
 
-The `test.c` and `test-multiprocess.c` files provided spawns two processes and three processes, one being a parent and others being child or grand child. The patched files add two new system calls, `init_counter()` and `set_counter()`. The former initializes a global counter and sets its value to 0 and `set_counter(x)` sets the value of the counter to `x`.
+The `test.c` and `test-multiprocess.c` files provided spawns two processes and three processes respectively, one being a parent and others being child or grand child. The patched files add three triplets of three new system calls (one triplet corresponding to one global counter variable), `init_counter()`, `update_counter()` and `display_counter()`. The first call initializes a global counter variable and sets its value to 0, `update_counter()` increments the value of the counter by 1 and updates it to the new value and `display_counter()` displays the value of the counter variable.
 
 It creates two processes which try to increment the global counter at once. This is a race condition, therefore running the testcase without locking the global variable would give a result that is less than expected. After locking the critical sections of the code however, the result should be the same every time.
 
