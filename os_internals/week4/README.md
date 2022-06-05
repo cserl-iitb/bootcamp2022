@@ -71,6 +71,8 @@ wherever required, to make the new system call work perfectly fine.**
 - [PART-A](Assignment/partA/README.md)
 - [PART-B](Assignment/partB/README.md)
 
+For this assignment, you have been provided with testcases and respective expected outputs. Run the test cases and verify your outputs with the given outputs.
+
 ---------------------------------------------------------
 
 > ## Submission
