@@ -1,0 +1,8 @@
+Start: memory usage in pages: virtual: 3, physical 3
+mmap failed for wrong inputs
+mmap failed for wrong inputs
+After mmap one page: memory usage in pages: virtual: 4, physical 3
+After access of one page: memory usage in pages: virtual: 4, physical 4
+After mmap two pages: memory usage in pages: virtual: 6, physical 4
+After access of first page: memory usage in pages: virtual: 6, physical 5
+After access of second page: memory usage in pages: virtual: 6, physical 6

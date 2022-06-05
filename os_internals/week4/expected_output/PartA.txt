@@ -1,0 +1,4 @@
+Total user virtual pages: 3 
+Total user physical pages: 3 
+Total user virtual pages now: 5 
+Total user physical pages now: 5 
