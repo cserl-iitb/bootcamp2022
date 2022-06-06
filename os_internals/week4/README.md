@@ -6,26 +6,26 @@ In this week, you will learn how the memory is managed by the OS.
 
 Please watch the lecture videos in the series as given:
 
-1. Introduction to virtual memory: 
+1. **Introduction to virtual memory**: 
    - [Video](https://www.youtube.com/watch?v=2Xj2V8kYNWM)
    - [Slide](https://drive.google.com/file/d/1hJjGopKu3vZzukcyo4v_NfyZ2bYThCCU/view?usp=sharing)
    - Reference from the OSTEP book: Chapter 13, Chapter 14
-2. Mechanism of address translation: 
+2. **Mechanism of address translation**: 
    - [Video](https://www.youtube.com/watch?v=mYxkp5vpyqc&t=1s)
    - [Slide](https://drive.google.com/file/d/1OC5O6GbhZiPnOuyzCkwzsLtqXBcAsE5W/view?usp=sharing)
    - Reference from the OSTEP book: Chapter 15
-3. Paging: 
+3. **Paging**: 
    - [Video](https://www.youtube.com/watch?v=PTh2kL8ENzU)
    - [Slide](https://drive.google.com/file/d/1MthC20Ky2gOeOaII6EL0nm5_dozrg64H/view?usp=sharing)
    - Reference from the OSTEP book: Chapter 18, Chapter 20
-4. Demand Paging: 
+4. **Demand Paging**: 
    - [Video](https://www.youtube.com/watch?v=r9NwqtqS2Ac)
    - [Slide](https://drive.google.com/file/d/1sRHQdA1c3QnPZoypeqs4xMMWsRQHCTIp/view?usp=sharing)
    - Reference from the OSTEP book: Chapter 21, Chapter 22
-5. Virtual memory and paging in xv6: 
+5. **Virtual memory and paging in xv6**: 
    - [Video](https://www.youtube.com/watch?v=67Q7tfUk6pI)
    - [Slide](https://drive.google.com/file/d/1TQW1GADdIO1kPHnvIbgVD4j9vtsx5OiK/view?usp=sharing)
-6. Memory management for user processes in xv6: 
+6. **Memory management for user processes in xv6**: 
    - [Video](https://www.youtube.com/watch?v=8V2YkO7lfvs&t=1s)
    - [Slide](https://drive.google.com/file/d/1fbBC2YfuC_qJ0YpIobAWLsGggY5nDtnf/view?usp=sharing)
 
