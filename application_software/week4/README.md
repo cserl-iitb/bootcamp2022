@@ -3,8 +3,8 @@
 This week, you will add more features to the simple HTTP server built in the previous week. 
 There is no new template code this week, you will only have to make simple changes to the existing code from week 3.
 
-First, please work on [worker thread pool](#worker-thread-pool), and then you can move on to [dynamic HTTP responses](#dynamic-http-responses).
-Once you are done with both of these, you can try to implement [other features](#other-features)
+We have two exercises: [worker thread pool](#worker-thread-pool), and [dynamic HTTP responses](#dynamic-http-responses).
+Once you are done with both of these, you can try to implement [other features](#other-features).
 
 ## Worker thread pool
 
