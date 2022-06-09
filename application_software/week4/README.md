@@ -64,7 +64,7 @@ Your server should work like the following:
 
 Any other URL should return the standard 404 response.
 
-To do this exercise, you can modify [the function](https://github.com/cserl-iitb/bootcamp2022/blob/438038440a4dbd0cc0b2b7730cb36302cf21f31f/application_software/week3/http_server.cpp#L40) that generates HTML responses to handle a wide variety of URLs in this manner.
+To do this exercise, you can modify [the function](https://github.com/cserl-iitb/bootcamp2022/blob/89aecc76ea60e24a217599a265eeca84f46d814e/application_software/week3/http_server.cpp#L40) that generates HTML responses to handle a wide variety of URLs in this manner.
 
 
 ### Templates
