@@ -12,4 +12,4 @@ server: $(SERVER_FILE)
 	$(CC) $(SERVER_FILE) -o server
 
 clean:
-	rm -f load_gen server
+	rm -f load_gen server *.log
