@@ -63,6 +63,7 @@ void *start_function(void *arg) {
   /* close socket */
   close(newsockfd);
   pthread_exit(NULL);
+  pthread_detach(pthread_self());
 }
 
 int main(int argc, char *argv[]) {
