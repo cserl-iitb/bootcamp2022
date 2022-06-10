@@ -9,9 +9,38 @@
 
 #include <pthread.h>
 
+// error handling function
 void error(char *msg) {
   perror(msg);
   exit(1);
+}
+
+
+// server thread function
+void *start_function(void *arg) {
+  int newsockfd = *(int *)arg;
+  free(arg);
+
+  char buffer[256];
+  int n;
+
+  /* read message from client */
+  bzero(buffer, 256);
+  n = read(newsockfd, buffer, 255);
+  if (n < 0)
+    error("ERROR reading from socket");
+
+  /* send reply to client */
+  n = write(newsockfd, "I got your message", 19);
+  if (n < 0)
+    error("ERROR writing to socket");
+
+  /* log in stout */
+  printf("Received: %s", buffer);
+
+  /* close socket */
+  close(newsockfd);
+  pthread_exit(NULL);
 }
 
 int main(int argc, char *argv[]) {
