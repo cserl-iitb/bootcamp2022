@@ -9,7 +9,7 @@ load_gen: $(LOAD_GEN_FILE)
 	$(CC) $(LOAD_GEN_FILE) -o load_gen
 
 server: $(SERVER_FILE)
-	$(CC) $(SERVER_FILE) -o server
+	$(CC) $(SERVER_FILE) -ggdb3 -o server
 
 clean:
 	rm -f load_gen server *.log
