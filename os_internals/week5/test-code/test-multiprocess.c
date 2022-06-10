@@ -21,20 +21,20 @@ int main(void)
                to be 20000.
     */
 
-    // Hint: Implement one locking system here
+    // Hint: Implement one locking system for this counter variable
     
     for(int i=0; i<10000; i++){
-        set_cnt_1(display_count()+1);
+        update_cnt_1(display_count()+1);
     }
 
     if(ret1 == 0){
-        // Hint: Implement one locking system here
+        // Hint: Implement one locking system for this counter variable
 
         init_counter_2();
         int ret2 = fork(); //creates child process 2
 
         for(int j=0; j<10000; j++){
-            set_cnt_2(display_count_2()+1);
+            update_cnt_2(display_count_2()+1);
         }
 
         if(ret2==0)
