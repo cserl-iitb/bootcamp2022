@@ -27,3 +27,14 @@ Try to run valgrind on this server and see if it detects any memory leaks.
 
 It should detect two major memory leaks - one would be due to the malloc() call (memory not freed) and the other would be due to pthread_create() call (thread stack not cleaned up).  
 Both are easily - first by using free() call to free the memory allocated by malloc() and second by using pthread_join() call to wait for the thread to finish or pthread_detach() to detach the thread after exiting.
+
+Following is the comparison of the two servers when run against a load generator with only 100 users for 1 minute:
+
+- Server with memory leaks (`./test_server_with_leaks.c`):
+
+  - Start of the run: ![Server with memory leaks at Start](./with_leaks_start.png)
+  - End of the run: ![Server with memory leaks at End](./with_leaks_end.png)
+
+- Server without memory leaks (`../test_server.c`):
+  - Start of the run: ![Server without memory leaks at Start](./without_leaks_start.png)
+  - End of the run: ![Server without memory leaks at End](./without_leaks_end.png)
