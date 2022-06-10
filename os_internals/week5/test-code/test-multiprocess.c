@@ -15,7 +15,7 @@ int main(void)
     /*  
         Tescases:
             1. Print lock id if the lock has been initialized.
-            2. define and call the function 'int holding_mylock(int id)' to check the status of
+            2. Define and call the function 'int holding_mylock(int id)' to check the status of
                the lock in two scenarios - i) when the lock is held and ii) when the lock is not held. 
             3. You have to implement locking in all the processes so that the output value of both counter variables comes
                to be 20000.
