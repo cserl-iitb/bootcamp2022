@@ -46,7 +46,6 @@ void *start_function(void *arg) {
 int main(int argc, char *argv[]) {
   int sockfd, newsockfd, portno;
   socklen_t clilen;
-  char buffer[256];
   struct sockaddr_in serv_addr, cli_addr;
   int n;
 
@@ -56,14 +55,11 @@ int main(int argc, char *argv[]) {
   }
 
   /* create socket */
-
   sockfd = socket(AF_INET, SOCK_STREAM, 0);
   if (sockfd < 0)
     error("ERROR opening socket");
 
-  /* fill in port number to listen on. IP address can be anything (INADDR_ANY)
-   */
-
+  /* set server attrs */
   bzero((char *)&serv_addr, sizeof(serv_addr));
   portno = atoi(argv[1]);
   serv_addr.sin_family = AF_INET;
@@ -71,34 +67,28 @@ int main(int argc, char *argv[]) {
   serv_addr.sin_port = htons(portno);
 
   /* bind socket to this port number on this machine */
-
   if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
     error("ERROR on binding");
 
   /* listen for incoming connection requests */
+  n = listen(sockfd, 1);
+  if (n < 0)
+    error("ERROR on listen");
 
-  listen(sockfd, 5);
   clilen = sizeof(cli_addr);
+  while (1) {
+    /* accept a new request, create a newsockfd */
+    newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &clilen);
+    if (newsockfd < 0)
+      error("ERROR on accept");
 
-  /* accept a new request, create a newsockfd */
-
-  newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &clilen);
-  if (newsockfd < 0)
-    error("ERROR on accept");
-
-  /* read message from client */
-
-  bzero(buffer, 256);
-  n = read(newsockfd, buffer, 255);
-  if (n < 0)
-    error("ERROR reading from socket");
-  printf("Here is the message: %s", buffer);
-
-  /* send reply to client */
-
-  n = write(newsockfd, "I got your message", 18);
-  if (n < 0)
-    error("ERROR writing to socket");
+    /* create a new thread to handle the client */
+    int *arg = malloc(sizeof(int));
+    *arg = newsockfd;
+    pthread_t thread;
+    if (pthread_create(&thread, NULL, start_function, (void *)arg) != 0)
+      printf("Failed to create Thread\n");
+  }
 
   return 0;
 }
