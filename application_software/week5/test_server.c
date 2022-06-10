@@ -15,6 +15,23 @@ void error(char *msg) {
   exit(1);
 }
 
+// non-CPU intensive server pause
+void IO(float sec) { usleep((int)(sec * 1e6)); }
+
+// CPU intensive server pause
+void CPU(int n) {
+  for (int i = 0; i < n; i++) {
+    int x = i * i;
+  }
+}
+
+// mix of CPU and non-CPU intensive server pause
+void IO_CPU(float sec, int n) {
+  usleep((int)(sec * 1e6));
+  for (int i = 0; i < n; i++) {
+    int x = i * i;
+  }
+}
 
 // server thread function
 void *start_function(void *arg) {
@@ -29,6 +46,11 @@ void *start_function(void *arg) {
   n = read(newsockfd, buffer, 255);
   if (n < 0)
     error("ERROR reading from socket");
+
+  /* switch between different forms of server */
+  // IO(2);
+  // CPU(1e7);
+  IO_CPU(2, 1e7);
 
   /* send reply to client */
   n = write(newsockfd, "I got your message", 19);
