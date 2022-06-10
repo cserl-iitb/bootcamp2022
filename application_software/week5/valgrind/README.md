@@ -10,14 +10,11 @@ valgrind --tool=memcheck --leak-check=yes --show-leak-kinds=all --track-origins=
 
 ### Useful links to learn:
 
-- https://stackoverflow.com/questions/5134891/how-do-i-use-valgrind-to-find-memory-leaks
-- https://www.cprogramming.com/debugging/valgrind.html
-- http://cs.ecs.baylor.edu/~donahoo/tools/valgrind/
-- https://valgrind.org/docs/manual/quick-start.html (Valgrind Documentation)
-
-## TODO
-
-- Explain some useful arguments (refer to first link)
-- Add a simple not server related example for valgrind (refer to the second link)
-- Add a simple http server with a function with mem leak and show that it will cause issues if a lot of requests come (shows importance of valgrind)
-- Ask them to run valgrind on their code before doing load testing
+- https://stackoverflow.com/a/44989219  
+  This pretty much covers all the essential with some useful examples
+- https://www.cprogramming.com/debugging/valgrind.html  
+  This is a good resource for debugging - follow the links in the related articles section for detailed explanations
+- http://cs.ecs.baylor.edu/~donahoo/tools/valgrind/messages.html  
+  This is a good resource for understanding the different kinds of memory errors caught by Valgrind
+- https://valgrind.org/docs/manual/quick-start.html  
+  Valgrind Documentation
