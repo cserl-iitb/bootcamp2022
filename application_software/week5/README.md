@@ -4,23 +4,13 @@ This week, we will perform a load test of your HTTP server to measure its capaci
 
 ## Checking for Memory leaks
 
-Memory leak occurs when programmers create a memory in heap and forget to delete it.
+Memory leak occurs when programmers create a memory in heap and forget to delete it. The consequences of memory leak is that it reduces the performance of the computer by reducing the amount of available memory. Eventually, in the worst case, too much of the available memory may become allocated and all or part of the system stops working correctly, the application fails, or the system slows down vastly. Memory leaks are particularly serious issues for programs like servers which by definition never terminate. Since performance testing requires running the server under high load, a server with memory leak(s) would likely run out of memory.
 
-The consequences of memory leak is that it reduces the performance of the computer by reducing the amount of available memory. Eventually, in the worst case, too much of the available memory may become allocated and all or part of the system or device stops working correctly, the application fails, or the system slows down vastly.
-
-Memory leaks are particularly serious issues for programs like servers which by definition never terminate.
-
-Since performance testing requires load testing, a server with memory leak(s) would likely run out of memory.
-
-Valgrind is a tool used to check for memory leaks. Refer to the [Memory Leaks using Valgrind](./valgrind/README.md) to remove memory leaks from servers written by you in last three weeks.
+Valgrind is a tool used to check for memory leaks. Refer to the [Memory Leaks using Valgrind](./valgrind/README.md) to learn about Valgrind and do some practice exercises. Then, use Valgrind to remove memory leaks from servers written by you in the last three weeks.
 
 ## Closed-loop load generator client
 
-To measure the capacity of your web server, you will first build a load generator client to rapidly fire requests at the server. Begin with writing a simple HTTP client that sends a HTTP request to the web server. You can add HTTP request generation logic to your simple echo client, for example. Next, modify this client to act as a closed-loop load generator, i.e., load is generated from a certain number of concurrent emulated users.
-
-Or you use the template provided [here](./load_gen.c) to build your own closed-loop load generator client.
-
-You are not expected to modify your server in any way (except removing memory leaks). There is a simple server provided [here](./test_server.c) that you can use as a test server for your closed-loop load generator client.
+To measure the capacity of your web server, you will first build a load generator client to rapidly fire requests at the server. Begin with writing a simple HTTP client that sends a HTTP request to the web server. You can add HTTP request generation logic to your simple echo client, for example. Next, modify this client to act as a closed-loop load generator, i.e., load is generated from a certain number of concurrent emulated users. A template is provided [here](./load_gen.c) to build your own closed-loop load generator client, which you may choose to use. You are not expected to modify your server in any way, except removing memory leaks or fixing any bugs that may arise during the testing. 
 
 Your load generator will be a closed-loop multi threaded program, with the number of concurrent users/threads, think time between requests, and the duration of the load test specified as command line arguments. Each thread of the load generator will emulate a HTTP user/client, by sending a HTTP request to the server, waiting for a response from the server, and firing the next request after the think time. You can use a pre-defined set of URLs to request from each emulated user, and ensure that the corresponding resources are available at the server as well. The load generator threads also need not display the received HTTP responses. After all the load generator threads run for the specified duration, the load generator must compute (across all its threads) and display the following performance metrics before terminating.
 
