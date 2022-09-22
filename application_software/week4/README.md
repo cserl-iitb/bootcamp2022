@@ -31,7 +31,7 @@ The main server thread and worker threads will use condition variables to signal
 After you make these changes, your server will be able to handle multiple clients concurrently as before, but without having to create a new thread for every client. Start your server in one terminal. Open separate terminals to start several different clients, and check that all of them can correctly communicate with the HTTP server. You can also print out some debug output to check that clients are correctly being assigned to worker threads, and that the worker thread is serving another client after the first client terminates.
 
 
-## Dynamic HTTP responses
+## Dynamic HTTP responses (Optional)
 
 The simple HTTP server built in the previous week could only handle static web pages stored in the file system.  
 
@@ -76,7 +76,7 @@ The above can be accomplished simply by generating the HTML response body using 
 However, you will need a more convenient way to generate HTML dynamically. The most common approach relies on templates. A template contains the static parts of the desired HTML output as well as some special syntax describing how dynamic content will be inserted. For example, the HTML file will have ```<html> <h2> Hello {{name}}!</h2> </html>```. Then, while returning the response, you can parse this HTML file to replace instances of ``{{name}}`` with the name you get from the URL. 
 
 
-## Other features
+## Other features (Optional)
 
 You can add other enhancements to your web server to make it more realistic. 
 Some suggestions are given below:
