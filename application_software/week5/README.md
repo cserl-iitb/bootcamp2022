@@ -18,13 +18,13 @@ Your load generator will be a closed-loop multi threaded program, with the numbe
 
 2. Average response time of the server, defined as the average amount of time taken to get a response from the server for any request, as measured at the load generator.
 
-## Load testing guidelines
+After writing the code for your load generator to generate load and compute throughput/response time statistics, you must run a load test on your server. Run multiple experiments by varying the load level (i.e., number of concurrent load generating threads) at the load generator. You can experiment with different think times as well to see what works well. In the end, you must generate plots of the average throughput and response time of the server as a function of the load level. You must then use these performance graphs to estimate the capacity of your server, and identify the resource causing the performance bottleneck.
 
-After writing the code for your load generator, you must run a load test in the following manner. Run multiple experiments by varying the load level (i.e., number of concurrent load generating threads) at the load generator. You can experiment with different think times as well. For each setting of think time, plot the average throughput and response time of the server as a function of the load level. These performance graphs will help you estimate the capacity of your server.
+## Load testing guidelines
 
 A few things to keep in mind when running this load test:
 
-1. Each experiment at a given load level must run for at least a minute to ensure that the throughput and response time have converged to steady state values. Your plots for throughput and response time should include at least 5 experimental samples at 5 different load levels.
+1. Each experiment at a given load level must run for at least a minute to ensure that the throughput and response time have converged to steady state values. Your plots for throughput and response time should include at least 5 throughput/latency measurements at 5 different load levels, and must show the server reaching saturation capacity.
 
 2. If all goes well, you will notice that the average server throughput initially increases with increasing load, but eventually flattens out at the server's capacity. The response time of the server starts small, but rapidly grows as the server approaches its maximum capacity. At the load when the server hits capacity, you will also notice that some hardware resource (e.g., CPU or network or disk) has hit close to 100\% utilization.
 
